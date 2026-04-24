@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+     body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(245, 222, 194);
+        }
+    .container{
+      width: 400px;
+      margin: 50px;
+      padding: 25px;
+      background-color:  rgb(231, 217, 199);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label{
+      font-weight: bold;
+      margin-top: 20px;
+      display: block;
+    }
+    button{
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      background-color:rgb(94, 93, 92);
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover{
+      background-color: rgb(139, 138, 137);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Course Registration Form</h1>
+    <h2>Learn Through Play</h2>
+    <p>Master coding with interactive challenges and rewards</p>
+    <h2>Direct Placement</h2>
+    <p>Get placed in top tech companies</p>
+    <p>our patners - IBM,Oracle,Adobe and many tech gaints...</p>
+    <form>
+      <label for="username">Name:</label>
+      <input id="username" type="text" placeholder="Enter Your FullName..." required>
+      <label for="email">Email:</label>
+      <input id="email" type="email" placeholder="example123@gmail.com">
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="tel" placeholder="Enter Phone Number... ">
+      <label>Gender</label>
+      <div class="gender">
+          <input type="radio" name="gender">male
+          <input type="radio" name="gender">female
+          <input type="radio" name="gender">prefer not to disclose gender
+      </div>
+      <label>Course</label>
+      <select required>
+        <option value="">Select Course</option>
+        <option>HTML & CSS</option>
+        <option>JavaScript</option>
+        <option>React</option>
+        <option>Core Java</option>
+        <option>Python</option>
+        <option>MySQL</option>
+      </select>
+      <label>Address</label>
+      <textarea rows="3" placeholder="Enter Your Address"></textarea>
+      <label for="right" > <input id="right" type="checkbox"> Accept terms & conditions</label>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </div>
+</body>
+</html>
