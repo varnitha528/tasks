@@ -44,6 +44,7 @@
 </head>
 <body>
   <div class="container">
+    <marquee direction="left">Hurry Up!!! Limited seats.... </marquee>
     <h1>Course Registration Form</h1>
     <h2>Learn Through Play</h2>
     <p>Master coding with interactive challenges and rewards</p>
@@ -75,8 +76,21 @@
       </select>
       <label>Address</label>
       <textarea rows="3" placeholder="Enter Your Address"></textarea>
+      <label for="resume">Upload Resume</label>
+      <input id="resume"name="resume" type="file">
+      <p>Your Duties</p>
+      <ul>
+        <li>Reading</li>
+        <li>Coding</li>
+      </ul>
+      <p>Our Duties</p>
+      <ol>
+        <li>Training</li>
+        <li>Placement</li>
+      </ol>
+      <a href="https://www.codingninjas.com/" target="_blank">Take to our website</a>
       <label for="right" > <input id="right" type="checkbox"> Accept terms & conditions</label>
-      <button type="submit">Submit</button>
+      <button type="submit" onclick="alert('Form submitted... You will recieve call soon!!!')">Submit</button>
       <button type="reset">Reset</button>
     </form>
   </div>
