@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile-Card</title>
+  <style>
+    body {
+  background-color: #a4a4ee;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+.card {
+  background: white;
+  width: 320px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid blue;
+
+}
+
+.title { color: #888; font-size: 14px; margin-bottom: 20px; }
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.stats div { font-size: 13px; color: #777; }
+
+.stats strong { color: #333; font-size: 18px; }
+
+.btn {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover { opacity: 0.9; }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+  <div class="profile-img">
+    <img src="assets/download.jpg" alt="Profile">
+  </div>
+  
+  <h2>Kunigiri Varnitha</h2>
+  <p class="title">Associate Software Engineer</p>
+
+<br>
+
+  <div class="stats">
+    <div><strong>12.5k</strong><br><span>Followers</span></div>
+    <div><strong>843</strong><br><span>Following</span></div>
+    <div><strong>42</strong><br><span>Projects</span></div>
+  </div>
+
+  <button class="btn">Follow User</button>
+</div>
+
+</body>
+</html>
