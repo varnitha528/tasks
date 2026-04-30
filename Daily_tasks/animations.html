@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations</title>
+  <style>
+        * {
+            --bg-color: #0a0a0a;
+            --card-bg: #121212;
+            --text-gray: #b0b0b0;
+        }
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            flex: 1;
+            min-width: 250px;
+            color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+              border: 1px solid black;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+           
+        }
+        .card-img {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 25px;
+        }
+        .card-title {
+            font-weight: 650;
+            margin-bottom: 15px;
+        }
+        .card-text {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        span{
+          color: rgb(247, 110, 17);
+          font-size: 17.0146px;
+        }
+        </style>
+</head>
+<body>
+  
+<div class="container">
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://s3.wns.com/S3_5/Images/industries/HEA/Continuous-Innovation.jpg')"></div>
+        <div class="card-content">
+            <div class="card-title"><span>C</span>ontinuous Innovation</div>
+            <p class="card-text">Innovate continuously to accelerate clinical and operational transformation with autonomous coding, AI-powered claims and customer experience, and predictive models integrated with EHR systems – delivering 4:1 ROI and next-level care experiences.</p>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://s3.wns.com/S3_5/Images/industries/HEA/Operational-Dexterity.jpg')"></div>
+        <div class="card-content">
+            <div class="card-title"><span>O</span>perational Dexterity</div>
+            <p class="card-text">Scale effortlessly with agentic AI, multi-lingual support, and globally distributed teams streamlining complex workflows.</p>
+        </div>
+    </div>
+
+    
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://s3.wns.com/S3_5/Images/industries/HEA/Responsible-Evolution.jpg')"></div>
+        <div class="card-content">
+            <div class="card-title"><span>R</span>esponsible Evolution</div>
+            <p class="card-text"> Adapt swiftly to regulatory shifts with AI-augmented compliance engines, predictive fraud detection and intelligent policy platforms, ensuring audit-readiness and risk mitigation in real-time.</p>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://s3.wns.com/S3_5/Images/industries/HEA/Ecosystem-Synergy.jpg')"></div>
+        <div class="card-content">
+            <div class="card-title"><span>E</span>cosystem Synergy</div>
+            <p class="card-text">Lead resiliently by advancing ESG-aligned health analytics, digital procurement and customer experience-driven workforce upskilling while harnessing the power of partnerships across care, compliance and clinical innovation.</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
