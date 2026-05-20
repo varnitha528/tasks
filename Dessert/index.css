@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
+  font-family: 'playfair',sans-serif;
 }
 
 .nav-container {
-  width: 100vw;
+  width: 100%;
   height: 80px;
   background-color: antiquewhite;
   display: flex;
@@ -232,7 +233,7 @@ transform: translateY(50px) scale(0.8);
 /* section3 */
 .sec3 {
   margin: 100px 0;
-  width: 100vw;
+  width: 100%;
   height: 700px;
   display: grid;
   place-items: center;
@@ -387,8 +388,8 @@ color: chocolate;
 /* footer */
 footer {
   margin-top: 100px;
-  filter: opacity(0.8);
-  background:url(images/bg2.avif) no-repeat center/cover;
+  filter: opacity(0.7);
+  background:url(images/footer.jpg) no-repeat center/cover;
   border-radius: 100px 100px 0 0;
 }
 
@@ -451,4 +452,329 @@ footer {
   border-top: 1px solid #ccc;
   color: white;
   font-size: 19px;
+}
+
+/* media-queries */
+
+
+/*1. BIG SCREENS / LARGE LAPTOPS*/
+
+@media (min-width: 1440px){
+
+  .content h1{
+    font-size: 6rem;
+  }
+
+  .grid{
+    width: 75vw;
+  }
+
+  .reviews{
+    width: 35%;
+  }
+
+}
+
+
+/*   2. LAPTOPS */
+
+@media (max-width: 1200px){
+
+  .content h1{
+    font-size: 4rem;
+  }
+
+  .grid{
+    grid-template-columns: repeat(3,1fr);
+    width: 90vw;
+  }
+
+  .para{
+    font-size: 3.5rem;
+    width: 70%;
+  }
+
+  .reviews{
+    width: 50%;
+    transform: translate(500px,-400px);
+  }
+
+}
+
+
+/* 3. TABLETS */
+
+@media (max-width: 992px){
+
+  /* NAVBAR */
+
+  .nav-container{
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .items{
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .logo{
+    font-size: 2.2rem;
+  }
+
+
+  /* HERO SECTION */
+
+  .sec1{
+    height: 700px;
+  }
+
+  .content{
+    padding-top: 30%;
+  }
+
+  .content h1{
+    font-size: 3rem;
+  }
+
+  .btn-buy{
+    padding: 15px 40px;
+    font-size: 18px;
+  }
+
+
+  /* GRID */
+
+  .grid{
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+  }
+
+
+  /* SECTION 3 */
+
+  .sec3{
+    height: 500px;
+  }
+
+  .para{
+    width: 80%;
+    font-size: 2.5rem;
+    height: auto;
+    padding: 30px;
+  }
+
+
+  /* SECTION 4 */
+
+  .sec4{
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .syrup{
+    width: 350px;
+  }
+
+
+  /* SECTION 5 */
+
+  .slider{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .img-id1,
+  .img-id2{
+    transform: translateY(0);
+    margin: 0;
+    width: 80%;
+  }
+
+  .reviews{
+    position: static;
+    transform: none;
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+
+  .reviews img{
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .reviews p{
+    font-size: 2rem;
+  }
+
+
+  /* FOOTER */
+
+  .footer-container{
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+  }
+
+}
+
+
+/*  4. MOBILE DEVICES*/
+
+@media (max-width: 768px){
+
+  /* NAVBAR */
+
+  .nav-container{
+    width: 100%;
+    padding: 15px;
+  }
+
+  .logo{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .items{
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+
+  /* HERO */
+
+  .sec1{
+    height: 600px;
+  }
+
+  .content{
+    padding-top: 60%;
+  }
+
+  .content h1{
+    font-size: 2.2rem;
+    padding: 15px;
+  }
+
+  .btn-buy{
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+
+  /* SECTION 2 */
+
+  .sec2{
+    font-size: 35px;
+  }
+
+  .grid{
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  .card img{
+    width: 100%;
+  }
+
+
+  /* SECTION 3 */
+
+  .sec3{
+    height: 400px;
+  }
+
+  .para{
+    width: 90%;
+    font-size: 1.6rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+
+  /* SECTION 4 */
+
+  .sec4{
+    width: 95%;
+  }
+
+  .syrup{
+    width: 280px;
+  }
+
+  .syrup h3{
+    font-size: 1.3rem;
+  }
+
+  .syrup p{
+    font-size: 15px;
+  }
+
+
+  /* SECTION 5 */
+
+  .reviews{
+    width: 95%;
+  }
+
+  .reviews p{
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+
+  /* FOOTER */
+
+  footer{
+    border-radius: 40px 40px 0 0;
+  }
+
+  .footer-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-box{
+    width: 100%;
+  }
+
+}
+
+
+/* 5. SMALL MOBILE DEVICES */
+
+@media (max-width: 480px){
+
+  .content h1{
+    font-size: 1.8rem;
+  }
+
+  .btn-buy{
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .logo{
+    font-size: 1.7rem;
+  }
+
+  .sec2{
+    font-size: 28px;
+  }
+
+  .para{
+    font-size: 1.2rem;
+  }
+
+  .reviews p{
+    font-size: 1.2rem;
+  }
+
 }

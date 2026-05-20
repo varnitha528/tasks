@@ -22,11 +22,28 @@ body {
   z-index: 2;
 }
 
+
 .logo {
-  font-size: 40px;
-
+  font-size: 3rem;
+  font-weight: bold;
+color: chocolate;
+animation: sliding 2.5s ease-in-out;
 }
-
+@keyframes sliding{
+  0%{
+    transform: translateX(0);
+    opacity: 0;
+  }
+  55%{
+    transform: translateX(-50px) rotate(20deg);
+}
+85%{
+    transform: translateX(50px) rotate(-20deg);
+}
+100%{
+transform: translateX(0)
+}
+}
 .items {
   list-style: none;
   display: flex;
@@ -59,7 +76,7 @@ h2 {
 
 /* section1 */
 .sec1 {
-  width: 100vw;
+  width: 100%;
   height: 600px;
   margin: 100px auto 100px auto;
 }
@@ -154,7 +171,7 @@ image {
 
 /* section2 */
 .sec2 {
-  width: 100vw;
+  width: 100%;
   height: 1000px;
   margin: 100px auto 100px auto;
 }
@@ -245,7 +262,7 @@ image {
 /* section3 */
 .sec3 {
   margin: 100px auto;
-  width: 100vw;
+  width: 100%;
   height: 1000px;
 }
 
@@ -307,7 +324,7 @@ image {
 }
 /* section4 */
 .sec4{
-width: 100vw;
+width: 1005;
 height: 1000px;
 background-color: aqua;}
 
@@ -379,4 +396,372 @@ footer {
   border-top: 1px solid #ccc;
   color: white;
   font-size: 19px;
+}
+
+
+/* media-queries */
+/*  LARGE SCREENS*/
+
+@media (min-width:1400px){
+
+  .boxes,
+  .cards,
+  .image-container{
+    width:75%;
+  }
+
+}
+
+
+/*  LAPTOPS*/
+
+@media (max-width:1200px){
+
+  h2{
+    font-size:2rem;
+  }
+
+  .boxes,
+  .cards{
+    width:95%;
+    gap:20px;
+  }
+
+  .box,
+  .card{
+    width:300px;
+  }
+
+  .image-box:hover{
+    width:450px;
+  }
+
+}
+
+
+/* TABLETS*/
+
+@media (max-width:992px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* NAVBAR */
+
+  .nav-container{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+  }
+
+  .logo{
+    font-size:2.3rem;
+  }
+
+  .items{
+    flex-wrap:wrap;
+    gap:15px;
+    padding:10px;
+    font-size:16px;
+  }
+
+
+  /* HEADINGS */
+
+  h2{
+    font-size:2rem;
+    padding:30px;
+  }
+
+
+  /* SECTION 1 */
+
+  .sec1{
+    width:100%;
+    height:auto;
+  }
+
+  .boxes{
+    width:90%;
+    flex-wrap:wrap;
+    justify-content:center;
+    height:auto;
+    padding:30px;
+  }
+
+  .box{
+    width:45%;
+    height:auto;
+  }
+
+  .image img,
+  .id-image{
+    width:100%;
+    height:auto;
+  }
+
+  .name{
+    font-size:1.3rem;
+  }
+
+  .add,
+  .add1{
+    font-size:1.1rem;
+  }
+
+
+  /* SECTION 2 */
+
+  .sec2{
+    height:auto;
+  }
+
+  .cards{
+    width:90%;
+    flex-wrap:wrap;
+    justify-content:center;
+    height:auto;
+    padding:30px;
+  }
+
+  .card{
+    width:45%;
+    height:500px;
+  }
+
+  .back h2{
+    font-size:1.8rem;
+  }
+
+  .back p{
+    font-size:1.2rem;
+  }
+
+
+  /* SECTION 3 */
+
+  .sec3{
+    height:auto;
+  }
+
+  .image-container{
+    width:90%;
+    flex-wrap:wrap;
+    height:auto;
+    gap:20px;
+  }
+
+  .image-box{
+    width:45%;
+    height:400px;
+  }
+
+  .image-box:hover{
+    width:45%;
+  }
+
+  .image-box p{
+    font-size:1.5rem;
+    padding:20px;
+  }
+
+
+  /* SECTION 4 */
+
+  .sec4{
+    height:500px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-container{
+    flex-wrap:wrap;
+    gap:40px;
+    padding:30px;
+  }
+
+}
+
+
+/* MOBILE DEVICES */
+
+@media (max-width:768px){
+
+  /* NAVBAR */
+
+  .nav-container{
+    width:100%;
+    padding:15px;
+  }
+
+  .logo{
+    font-size:2rem;
+    text-align:center;
+  }
+
+  .items{
+    flex-direction:column;
+    gap:10px;
+    font-size:15px;
+  }
+
+
+  /* HEADINGS */
+
+  h2{
+    font-size:1.7rem;
+    padding:20px;
+  }
+
+
+  /* SECTION 1 */
+
+  .boxes{
+    width:95%;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .box{
+    width:100%;
+  }
+
+  .box:hover{
+    transform:none;
+  }
+
+  .btns{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .add,
+  .add1{
+    width:100%;
+    font-size:1rem;
+  }
+
+
+  /* SECTION 2 */
+
+  .cards{
+    width:95%;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .card{
+    width:100%;
+    height:450px;
+  }
+
+  .back h2{
+    font-size:1.5rem;
+  }
+
+  .back p{
+    font-size:1rem;
+  }
+
+  .back button{
+    font-size:1rem;
+  }
+
+
+  /* SECTION 3 */
+
+  .image-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .image-box{
+    width:95%;
+    height:300px;
+  }
+
+  .image-box:hover{
+    width:95%;
+  }
+
+  .image-box p{
+    font-size:1.2rem;
+  }
+
+  #discount{
+    font-size:1.1rem;
+  }
+
+
+  /* SECTION 4 */
+
+  .sec4{
+    height:300px;
+  }
+
+
+  /* FOOTER */
+
+  footer{
+    border-radius:40px 40px 0 0;
+  }
+
+  .footer-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .footer-box{
+    width:100%;
+  }
+
+  .footer-box p{
+    font-size:1rem;
+  }
+
+}
+
+
+/* SMALL MOBILE DEVICES*/
+
+@media (max-width:480px){
+
+  .logo{
+    font-size:1.5rem;
+  }
+
+  h2{
+    font-size:1.4rem;
+  }
+
+  .items{
+    font-size:14px;
+  }
+
+  .name{
+    font-size:1.1rem;
+  }
+
+  .price{
+    font-size:0.9rem;
+  }
+
+  .image-box{
+    height:250px;
+  }
+
+  .image-box p{
+    font-size:1rem;
+  }
+
+  .back h2{
+    font-size:1.3rem;
+  }
+
+  .back p{
+    font-size:0.9rem;
+  }
+
 }
