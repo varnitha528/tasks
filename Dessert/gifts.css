@@ -69,11 +69,29 @@ transform: translateX(0)
 
 h2 {
   color: chocolate;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-align: center;
   padding: 50px;
+  letter-spacing: 2px;
+  animation: glowup 2s infinite alternate;
 }
 
+@keyframes glowup{
+   0%{
+        text-shadow:
+        0 0 5px rgb(235, 136, 66),
+        0 0 10px rgb(235, 136, 66),
+        0 0 20px rgb(235, 136, 66);
+      }
+
+      100%{
+        text-shadow:
+        0 0 10px orange,
+        0 0 20px orange,
+        0 0 40px orange,
+        0 0 80px orange;
+      }
+}
 /* section1 */
 .sec1 {
   width: 100%;

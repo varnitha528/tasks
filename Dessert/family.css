@@ -294,6 +294,48 @@ font-size: 3.5rem;
       left:-10px;
     }
 
+
+    
+
+/* section5 */
+.slider{
+  width: 50%;
+  margin:100px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.reviews{
+  width: 40%;
+  height: 350px;
+  display: flex;
+  background-color:chocolate;
+  border-radius: 80px 0px 0px ;
+}
+
+.reviews img{
+  border-radius: 80px 0 0 0;
+  transition: transform ease 1s;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.reviews img:hover{
+  transform:scale(1.1) rotateX(15deg) rotateY(15deg);
+}
+.reviews p{
+display: flex;
+place-items: center;
+padding: 30px;
+font-size: 1.5rem;
+color: white;
+}
+
+.reviews{
+  box-shadow: 0 10px 20px rgb(0, 0, 0,0.5);
+}
+
+
     
 /* footer */
 footer {
@@ -378,6 +420,14 @@ footer {
   #id6{
     transform: translate(500%,50%);
   }
+  .slider{
+    width:90%;
+    gap:30px;
+  }
+
+  .reviews p{
+    font-size:1.3rem;
+  }
 
 }
 
@@ -412,6 +462,25 @@ footer {
     flex-wrap:wrap;
     gap:40px;
     padding:40px;
+  }
+
+   .slider{
+    width:95%;
+    gap:20px;
+  }
+
+  .reviews{
+    height:300px;
+  }
+
+  .reviews p{
+    font-size:1.1rem;
+    padding:20px;
+  }
+
+  .reviews img{
+    width:45%;
+    object-fit:cover;
   }
 
 }
@@ -510,6 +579,24 @@ footer {
 
 }
 
+ .slider{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .reviews{
+    width:80%;
+    height:auto;
+  }
+
+  .reviews img{
+    width:40%;
+  }
+
+  .reviews p{
+    font-size:1rem;
+  }
+
 
 /* MOBILE DEVICES */
 
@@ -595,6 +682,29 @@ footer {
     gap:15px;
   }
 
+  .slider{
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+  }
+
+  .reviews{
+    width:90%;
+    flex-direction:column;
+    border-radius:40px 40px 0 0;
+  }
+
+  .reviews img{
+    width:100%;
+    border-radius:40px 40px 0 0;
+  }
+
+  .reviews p{
+    padding:20px;
+    text-align:center;
+    font-size:1rem;
+  }
+
 }
 
 
@@ -648,4 +758,24 @@ footer {
     font-size:14px;
   }
 
+   .slider{
+    width:100%;
+    margin:50px auto;
+    gap:20px;
+  }
+
+  .reviews{
+    width:95%;
+    border-radius:25px 25px 0 0;
+  }
+
+  .reviews img{
+    border-radius:25px 25px 0 0;
+  }
+
+  .reviews p{
+    font-size:0.9rem;
+    padding:15px;
+    line-height:1.5;
+  }
 }
