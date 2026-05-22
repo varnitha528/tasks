@@ -293,7 +293,7 @@ animation: slideUp 2s ease-in-out;
 .slide-track img:hover{
   transform:scale(1.1);
   opacity: 0.8;
-   box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
+   box-shadow: 0 0 30px rgb(0, 0, 0, 0.4);
 }
 
 /* section5 */
@@ -321,6 +321,8 @@ text-align: center;
     display: flex;
       position:relative;
       overflow:hidden;
+      perspective:1000px;
+   overflow:hidden;
       border-radius:20px;
       cursor:pointer;
       animation: swing 4s ease-in-out ;
@@ -344,13 +346,14 @@ transform:rotate(-10deg);
       height:100%;
       background-color: bisque;
       padding:30px;
-      transition:0.7s;
-      transform:rotateX(90deg);
+      text-align: justify;
+      transition:0.8s;
+      transform:rotateX(90deg) translateY(100%);
       transform-origin:bottom;
     }
 .card:hover .content{
       bottom:0;
-      transform:rotateX(0deg);
+      transform:rotateX(0deg) translateY(0); 
     }
 
     h2{

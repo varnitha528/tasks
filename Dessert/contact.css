@@ -133,6 +133,7 @@ textarea {
 
 .btn-send:hover {
   color: white;
+  cursor: pointer;
   box-shadow: 0 0 10px chocolate;
   background-color: chocolate;
 }
