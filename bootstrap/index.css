@@ -6,41 +6,236 @@
   box-sizing: border-box;
   font-family: "Montserrat",sans-serif;
 }
-.carousel-caption h5{
-  color:rgb(121, 162, 54);
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: cursive;
+/* Navbar */
+
+/* Hero section */
+.sliders{
+  position: relative;
+  height: 80vh;
+  
 }
-.carousel-caption  p{
-    color:rgb(121, 162, 54);
-  font-size: 1.5rem;
+.slider-overlay{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index:1000;
 }
 
-/* section1 */
-.container1-fluid{
-  height: 400px;
+.heading{
+  font-size: 4rem;
+  color: white;
+  font-weight: bolder;
+}
+.text{
+  color: #eee;
+  margin-bottom: 2rem;
+}
+.btn-groups{
   display: flex;
-  padding: 50px;
+  justify-content: start;
   gap: 2rem;
-  justify-content: center;
-  align-items: center;
+}
+
+/* place section */
+.single_search select {
+    background: #e0eff4;
+    border: 1px solid #e0eff4;
+    margin-bottom: 20px;
+    padding: 0 25px;
+    width: 260px;
+    height: 52px;
+}
+
+/* Listing Section */
+.template_property
+ {
+    background: #e0eff4;
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 .img-fluid{
+  padding: 20px;
+}
+.single_property_content a {
+  text-decoration: none;
+  color: black;
+}
+.single_property_content a:hover{
+  color:#198754 ;
+}
+
+/* team */
+
+.card1{
+  background-color:#e0eff4;
+  border-radius: 8px;
+}
+
+/* footer */
+.footer-area{
+  background: url(images/footer.png) center/cover;
+  color: white;
+}
+.footer-area a{
+  color: white;
+  text-decoration: none;
+}
+.con-footer{
+  padding-top: 200px;
+}
+
+/* contact page */
+.con-contact{
+  background: url(images/parallax-bg.jpg) center/cover;
+  height: 70vh;
+  background-color: rgb(0 ,0,0,0.4);
+  background-blend-mode: overlay;
+  background-position: fixed;
+}
+.con-contact h1{
+  color: white;
+  place-items: center;
+  text-align: center;
+  padding: 200px;
+  font-weight: bolder;
+}
+
+
+/* get in touch */
+
+.section-padding {
+    padding: 80px 0;
+}
+.single_contact_one{
+  height: 400px;
+}
+.form-group  input{
+  background-color: #e0eff4;
+  margin:1rem;
+}
+/* map */
+.map{
+  width: 100%;
+}
+.map iframe{
+  width:100%;
+  height:500px;  
+  border:none;
+}
+
+/* about page */
+.con1{
+  height: 70vh;
+  background: url(images/home-bg.jpg) center/cover;
+  background-color: rgb(0 ,0,0,0.4);
+  background-blend-mode: overlay;
+  text-align: center;
+  padding: 150px;
+}
+
+.about-us-content li{
+  list-style: none;
+}
+.fa-check{
+color: #198754;
+font-size: large;
+}
+
+/* section */
+.home_bg{
+  background:url(images/slide2.jpg) center/cover;
+  background-color: rgb(0 ,0,0,0.4);
+  background-blend-mode: overlay;
+    height: 70vh;
+padding: 150px;
+color: white;
+font-weight: bolder;
+}
+.hero-text h2{
+  color: white;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+
+/* 1st gallery */
+
+.masonry{
+  padding: 4rem 1rem;
+  background: white;
+}
+.masonry-subtitle{
+  margin: 2rem 0px;
+  color: #666;
+}
+.masonry-grid{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(3,200px);
+  gap: 1rem;
+  max-width: none;
+  margin: 0 auto;
+}
+.masonry-item {
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+.masonry-item img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.item1{
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.item2{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item3{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.item4{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.item5{
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.item6{
+  grid-column: span 4;
+  grid-row: span 1;
+}
+.masonry-item{
+  position: relative;
+}
+.masonry-item::after{
+  position: absolute;
+  color: white;
+  content: "View Story";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: rgb(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.masonry-item:hover::after{
+  opacity: 1;
 }
 
 
-/* section2 */
-.sec2-heading{
-  text-align: center;
-  justify-content: center;
-  padding: 50px;
-  font-size: 3rem;
+/* blog post */
+.blog_content a{
+  text-decoration: none;
+  color: black;
 }
-.container2-fluid{
-  display: flex;
-  padding: 50px;
+.blog_content a:hover{
+  color: #198754;
 }

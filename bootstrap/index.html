@@ -3,22 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TeaHouse</title>
+    <title>Hilux</title>
     <link rel="stylesheet" href="index.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   </head>
   <body>
    
-
-
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-    </a>
+<!-- navbar -->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="index.html">Hilux</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,18 +24,15 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+				 <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Shop</a>
+          <a class="nav-link" href="about.html">About</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>   
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -46,128 +40,362 @@
 
 <!-- hero section -->
 
-<div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/home-slider-background-img.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Brewed for Calm Moments</h5>
-        <p>Savor handcrafted teas made to slow down your day and warm your soul.</p>
-      </div>
+
+
+<div class="container-fluid">
+  
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner sliders">
+    <div class="carousel-item active ">
+      <img src="images/slide1.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="images/home-slider-background-img.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Where Every Sip Tells a Story</h5>
-        <p>From earthy classics to floral blends, discover tea crafted with care and tradition.</p>
-      </div>
+      <img src="images/slide2.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="images/home-slider-background-img.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Escape Into Tea & Comfort</h5>
-        <p>Step into a cozy space filled with rich aromas, soft vibes, and unforgettable flavors.</p>
-      </div>
+      <img src="images/slide3.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
 
-
-<!-- section1 -->
-
-
-
-<div class="container1-fluid">
- <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="images/card1.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Mint Special</h5>
-        <p class="card-text">Treat yourself to an exceptional mint tea from the British isles range developed by the famous Smithsonian teahouse.</p>
-        </div>
-    </div>
-  </div>
 </div>
 
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="images/card2.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Cherry Doom</h5>
-        <p class="card-text">Treat yourself to an exceptional mint tea from the British isles range developed by the famous Smithsonian teahouse.</p>
-        </div>
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-
-<!-- section2 -->
- <h2 class="sec2-heading">Mint & cherry</h2>
-
-
-<div class="container2-fluid">
-   <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="images/product1" class="card-img-top" alt="..." style="width: 250px;height: 250px;">
-      <div class="card-body">
-        <h5 class="card-title">Budou Brown Tea</h5>
-        <p class="card-text">African Imports</p>
+ <div class="container slider-overlay">
+  <div class="row">
+    <div class="col">
+      <div class="heading">Best Real state deals </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reprehenderit consequatur voluptas tenetur fugit, accusantium vitae modi aliquam commodi laborum quaerat harum enim architecto beatae omnis quidem, assumenda, blanditiis debitis.
+      </div>
+      <div class="btn-groups">
+        <button class="btn btn-light">About Us</button>
+        <button class="btn btn-success">Our Listing</button>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/product2" class="card-img-top" alt="..." style="width: 250px;height: 250px;"">
-      <div class="card-body">
-        <h5 class="card-title">Kai Dragon’s Pick</h5>
-        <p class="card-text">African Imports</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/product3" class="card-img-top" alt="..." style="width: 250px;height: 250px;" >
-      <div class="card-body">
-        <h5 class="card-title">Bamboo Leaf Green</h5>
-        <p class="card-text">African Imports</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/product4" class="card-img-top" alt="..." style="width: 250px;height: 250px;" >
-      <div class="card-body">
-        <h5 class="card-title">West Mountain Tea</h5>
-        <p class="card-text">African Imports</p>
-      </div>
-    </div>
-  </div>
-</div>
+ </div>
 
-</div>
+
+<!-- place section -->
+
+  <div class="search_bar section-padding">
+		<div class="container">
+			<div class="row mt-5">
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search mb-3">
+						<select>
+							<option value="1">Location</option>
+							<option value="2">United States</option>
+							<option value="3">United Kingdom</option>
+							<option value="3">Afghanistan</option>
+							<option value="3">Albania</option>
+							<option value="3">Australia</option>
+							<option value="3">Benin</option>
+							<option value="3">Belgium</option>
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search">
+						<select>
+							<option value="1">Category</option>
+							<option value="1">Category</option>
+							<option value="1">Category</option>
+							<option value="1">Category</option>
+
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search">
+						<select>
+							<option value="1">Property Type</option>
+							<option value="1">Residential</option>
+							<option value="1">Commercial</option>
+							<option value="1">Land</option>
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search">
+						<select>
+							<option value="1">Property Status</option>
+							<option value="1">For Sale</option>
+							<option value="1">For Rent</option>
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search">
+						<select>
+							<option value="1">Price</option>
+							<option value="1">$15000</option>
+							<option value="1">$20000</option>
+							<option value="1">$25000</option>
+							<option value="1">$30000</option>
+							<option value="1">$35000</option>
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search">
+						<select>
+							<option value="1">Area</option>
+							<option value="1">50</option>
+							<option value="1">150</option>
+							<option value="1">250</option>
+							<option value="1">350</option>
+							<option value="1">450</option>
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search">
+						<select>
+							<option value="1">BedRooms</option>
+							<option value="1">1</option>
+							<option value="1">2</option>
+							<option value="1">3</option>
+							<option value="1">4</option>
+							<option value="1">5</option>
+							<option value="1">6</option>
+							<option value="1">7</option>
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-6 col-xs-12">
+					<div class="single_search">
+						<select>
+							<option value="1">Bathrooms</option>
+							<option value="1">1</option>
+							<option value="1">2</option>
+							<option value="1">3</option>
+							<option value="1">4</option>
+						</select>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-12 text-center">
+					<div class="search_btn py-5">
+						<a href="#" class="btn btn-serach-bg btn-success">search</a>
+					</div>
+				</div>
+			</div><!--- END ROW -->
+		</div><!--- END CONTAINER -->
+	</div>
+
+
+
+  <!-- listing section -->
+
+
+  <section class="template_property">
+		<div class="container">
+			<div class="section-title text-center wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+				<h2>Latest listing</h2>
+				<div></div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-sm-12 col-xs-12">
+					<div class="single_property card">
+						<img src="images/1.jpg" class="img-fluid" alt="">
+						<div class="single_property_description text-center py-4">
+							<span><i class="fa fa-object-group"></i> 900 sq ft</span>
+							<span><i class="fa fa-bed"></i> 4 Badrooms</span>
+							<span><i class="fa fa-star-o"></i> 2 Baths</span>
+						</div>
+						<div class="single_property_content px-4">
+							<h4><a href="#">Lodgeville Road</a></h4>
+							<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical. </p>
+
+						</div>
+						<div class="single_property_price p-4">
+							High Meadow Lane Mount Pleasant <span>$ 170,000</span>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div><!--- END SINGLE PROPERTY -->
+				</div><!--- END COL -->
+				<div class="col-lg-4 col-sm-12 col-xs-12">
+					<div class="single_property card" >
+						<img src="images/2.jpg" class="img-fluid" alt="">
+						<div class="single_property_description text-center py-4">
+							<span><i class="fa fa-object-group"></i> 900 sq ft</span>
+							<span><i class="fa fa-bed"></i> 4 Badrooms</span>
+							<span><i class="fa fa-star-o"></i> 2 Baths</span>
+						</div>
+						<div class="single_property_content px-4" >
+							<h4><a href="#">Rinehart Road</a></h4>
+							<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical. </p>
+
+						</div>
+						<div class="single_property_price p-4">
+							High Meadow Lane Mount Pleasant <span>$ 170,000</span>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+				</div><!--- END  COL-->
+				<div class="col-lg-4 col-sm-12 col-xs-12">
+					<div class="single_property card">
+						<img src="images/3.jpg" class="img-fluid" alt="">
+						<div class="single_property_description text-center py-4">
+							<span><i class="fa fa-object-group"></i> 900 sq ft</span>
+							<span><i class="fa fa-bed"></i> 4 Badrooms</span>
+							<span><i class="fa fa-star-o"></i> 2 Baths</span>
+						</div>
+						<div class="single_property_content px-4">
+							<h4><a href="#">Brighton Circle Road</a></h4>
+							<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical. </p>
+
+						</div>
+						<div class="single_property_price p-4">
+							High Meadow Lane Mount Pleasant <span>$ 170,000</span>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+				</div><!--- END  COL-->
+			</div><!--- END ROW -->
+		</div><!--- END CONTAINER -->
+	</section>
+
+
+
+<!-- Team -->
+
+
+<section id="team" class="our_team section-padding">
+		<div class="container">
+			<div class="section-title text-center wow zoomIn py-5" style="visibility: visible; animation-name: zoomIn;">
+				<h2>Professional team</h2>
+				<div></div>
+			</div>
+			<div class="row text-center">
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_team card1">
+						<img src="images/team-1.jpg" class="img-fluid" alt="">
+						<h3>Juthi Ahmed</h3>
+						<p>Co Founder</p>
+						
+					</div><!--- END SINGLE TEAM -->
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_team card1">
+						<img src="images/team-2.jpg" class="img-fluid" alt="">
+						<h3>Masum Billah</h3>
+						<p>Co Founder</p>
+						
+					</div><!--- END SINGLE TEAM -->
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_team card1">
+						<img src="images/team-3.jpg" class="img-fluid" alt="">
+						<h3>Syed Ekram</h3>
+						<p>Co Founder</p>
+						
+					</div><!--- END SINGLE TEAM -->
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_team card1">
+						<img src="images/team-4.jpg" class="img-fluid" alt="">
+						<h3>Hanjala Haque</h3>
+						<p>Co Founder</p>
+						
+					</div><!--- END SINGLE TEAM -->
+				</div><!--- END COL -->
+			</div><!--- END ROW -->
+		</div><!--- END CONTAINER -->
+	</section>
+
+
+
+
+<!-- footer -->
+ <footer class="footer-area py-5">
+		<div class="container con-footer">
+			<div class="row footer-padding">
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_footer">
+						<h4>Contact Us</h4>
+						<div class="footer_contact">
+							<ul>
+								<li><i class="fa fa-rocket"></i> <span>3481 Melrose Place, Beverly Hills, CA
+										90210</span></li>
+								<li><i class="fa fa-phone"></i> <span>Call Us - (+1) 517 397 7100</span></li>
+								<li><i class="fa fa-fax"></i> <span>Fax - (+12) 123 1234</span></li>
+								<li><i class="fa fa-envelope"></i> <span>info@example.com</span></li>
+							</ul>
+						</div>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_footer">
+						<h4>Customer service</h4>
+						<div class="footer_contact">
+							<ul>
+								<li><a href="#">My Account</a></li>
+								<li><a href="#">Order History</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Specials</a></li>
+								<li><a href="#">Help Center</a></li>
+							</ul>
+						</div>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_footer">
+						<h4>Helpful Link</h4>
+						<div class="footer_contact">
+							<ul>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Customer Service</a></li>
+								<li><a href="#">Company</a></li>
+								<li><a href="#">Investor Relations</a></li>
+								<li><a href="#">Advanced Search</a></li>
+							</ul>
+						</div>
+					</div>
+				</div><!--- END COL -->
+				<div class="col-lg-3 col-sm-3 col-xs-12">
+					<div class="single_footer">
+						<h4>Why choose Us</h4>
+						<div class="footer_contact">
+							<ul>
+								<li><a href="#">Shopping Guide</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Company</a></li>
+								<li><a href="#">Investor Relations</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</div><!--- END COL -->
+			</div><!--- END ROW -->
+			<div class="row text-center">
+				<div class="col-lg-12 col-sm-12 col-xs-12 wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+					<p class="footer_copyright">Hilux © 2026 All Rights Reserved.Varnitha Kunigiri</p>.
+				</div><!--- END COL -->
+			</div><!--- END ROW -->
+		</div><!--- END CONTAINER -->
+	</footer>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
