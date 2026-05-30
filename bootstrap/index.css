@@ -8,6 +8,13 @@
 }
 /* Navbar */
 
+header{
+   position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10000;
+  background: linear-gradient(180deg,#e0eff4,#a0b6ff);
+}
 /* Hero section */
 .sliders{
   position: relative;
