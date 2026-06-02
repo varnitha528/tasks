@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Display 1</title>
+<style>
+    body{
+      font-family: 'Courier New', Courier, monospace;
+      background-color: rgb(242, 241, 241);
+      padding: 50px;
+    }
+    .container{
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+.card {
+  width: 250px;
+  padding: 20px;
+  background-color: #f4dbdb;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+    .avatar{
+      width: 140px;
+     height: 140px;
+     border-radius: 50%;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+      margin: 0 auto 30px;
+    }
+    h3{
+      color: #333366;
+      font-size: 20px;
+    }
+    p{
+      color:#4c4c7a;
+      font-size: 14px;
+    }
+    .date{
+      color: #989595;
+      font-size: 12px;
+      padding-top: 20px;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="card">
+     <div class="avatar"> <img src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-1.jpg" alt="err Image" width="100px" height="100px" >
+     </div>
+      <h3>Connection</h3>
+      <p>
+        Lorem ipsum dolor sit amet, conse ctetuer adi pisci elit, sed dia nonu
+      </p>
+      <hr>
+      <span class="date">12 December, 2023</span>
+    </div>
+
+
+
+    <div class="card" >
+     <div class="avatar"> <img src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-2.jpg" alt="err Image" width="100px" height="100px">
+     </div>
+      <h3>Decoration</h3>
+      <p>
+        Lorem ipsum dolor sit amet, conse ctetuer adi pisci elit, sed dia nonu
+      </p>
+      <hr>
+      <span class="date">12 December, 2023</span>
+    </div>
+
+
+
+    <div class="card">
+     <div class="avatar"> <img src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-3.jpg" height="100px">
+     </div>
+      <h3>Disconnect</h3>
+      <p>
+        Lorem ipsum dolor sit amet, conse ctetuer adi pisci elit, sed dia nonu
+      </p>
+      <hr>
+      <span class="date">12 December, 2023</span>
+    </div>
+
+
+
+    <div class="card">
+     <div class="avatar"> <img src="https://bridge512.qodeinteractive.com/wp-content/uploads/2018/06/blog-img-4.jpg" alt="err Image" width="100px" height="100px">
+     </div>
+      <h3>Scientific</h3>
+      <p>
+        Lorem ipsum dolor sit amet, conse ctetuer adi pisci elit, sed dia nonu
+      </p>
+      <hr>
+      <span class="date">12 December, 2023</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML elements attributes & visuals</title>
+  <style>
+
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+
+  .blueText {
+    color:#1877f2;
+  }
+
+
+.named {
+  color: red;
+}
+
+
+.hex {
+  color: #ff5733;
+}
+
+.rgb {
+  color: rgb(255, 165, 0);
+}
+
+.rgba {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.hsl {
+  color: hsl(120, 100%, 50%);
+}
+
+.applied {
+  background-color: #c9c9ff; /* Light purple background */
+  border: 2px solid #000080; /* Dark blue border */
+  padding: 10px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+
+  </style>
+</head>
+<body>
+ 
+    <h1   class="blueText"  >HTML Elements, Attributes & Visuals</h1>
+    <p>A comprehensive guide to properties that control behavior and appearance.</p>
+
+<h2  class="blueText"  > 1. Common Attributes (href, src, alt, title)</h2>
+<p>Links with target & mailto:</p>
+<a href="https://google.com"  target="_blank">Google (New Tab)</a>
+|
+<a href="mailto:example@email.com">Send Email</a>
+  <h3>Images & Abbreviations:</h3>
+
+    <div style="margin-bottom: 20px;">
+        <img src="assets/download.jpg" alt="ERR Image" width="450">
+    </div>
+
+    <p>
+        Hover over this: <abbr title="HyperText Markup Language">HTML</abbr>
+    </p>
+
+    <h2   class="blueText"  >2. Event Attributes (JavaScript Interaction)</h2>
+    <button onclick="alert('Heyyyyyy its been clicked!!')">Click Me (Alert)</button>
+    <p onmouseover="this.style.color='red'">Hover over me to change color</p>
+    <p ondblclick="alert('Heyyyyyy its been double clicked!!')">Double click me</p>
+
+
+
+    <form>
+  <h2   class="blueText"  >3. Input Types & Form Attributes</h2>
+
+  <div style="display: flex; gap: 40px;">
+   
+    <div>
+      <p>Text (Required):<br>
+        <input type="text" placeholder="Enter Your name" required>
+      </p>
+
+      <p>Email:<br>
+        <input type="email" placeholder="Email">
+      </p>
+
+      <p>Date Picker:<br>
+        <input type="date">
+      </p>
+
+      <p>Color Picker:<br>
+        <input type="color">
+      </p>
+
+      <p>Selection:<br>
+        <select>
+          <option>One choice</option>
+           <option>From many</option>
+        </select>
+      </p>
+    </div>
+
+
+
+
+    <div>
+      <p>Password:<br>
+        <input type="password" placeholder="Hidden chars">
+      </p>
+
+      <p>Number:<br>
+        <input type="number">
+      </p>
+
+      <p>Range Slider:<br>
+        <input type="range">
+      </p>
+
+      <p>File Upload:<br>
+        <input type="file">
+      </p>
+
+      <p>
+        <input type="checkbox"> Checkbox 
+        <input type="radio" name="choice"> Radio
+      </p>
+    </div>
+  </div>
+
+  <br>
+  <button type="submit">Submit Form</button>
+  <button type="reset">Clear All</button>
+</form>
+
+
+
+
+  <div class="container">
+
+ <h2   class="blueText">4. Visuals, Media & Colors</h2>
+  <h4>Color Formats:</h4>
+  
+  <p class="named">Named: Red text</p>
+  <p class="hex">HEX: Orange-Red (#ff5733)</p>
+  <p class="rgb">RGB: Orange (255, 165, 0)</p>
+  <p class="rgba">RGBA: 50% transparent Red</p>
+  <p class="hsl">HSL: Green (Hue 120)</p>
+
+  <div class="applied">
+    Applied: Background & Border Attributes
+  </div>
+</div>
+
+
+<h4>Audio Control:</h4>
+<audio id="audio-player" controls>
+  <source src="your-audio-file.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<h2   class="blueText">5. Advanced Table Layout (rowspan & colspan)</h2>
+
+
+<table border="1" style="width: 40%; border-collapse: collapse; text-align: left;">
+  <caption>Student Report Card</caption>
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    
+      <td rowspan="2">Alice</td>
+      <td>Math</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Science</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      
+      <td colspan="2" style="text-align: right;"><strong>Total</strong></td>
+      <td>175</td>
+    </tr>
+    <tr>
+      
+      <td colspan="3" style="text-align: center; font-size: small;">End of Academic Report</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2  class="blueText">6. Layout Containers (ID & Class)</h2>
+<div class="container-layout">
+  <p id="unique-paragraph">This div uses a generic container layout.</p>
+  <p id="unique-paragraph">This paragraph has a unique ID attribute.</p>
+</div>
+
+  </body>
+</html>

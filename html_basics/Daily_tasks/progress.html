@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress</title>
+  <style>
+    .nav{
+      display: flex;
+      margin-top: 30px;
+    }
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  font-family: sans-serif;
+}
+.image{
+  
+  margin-left: 30px;
+  width: 60px;
+  height: 60px;
+  display:inline-block;
+  padding-right: 500px;
+}
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.container { max-width: 500px;
+display: flex; }
+
+h2 { font-size: 42px; margin-bottom: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  color: rgb(120, 77, 160); 
+}
+
+.skill { margin-bottom: 25px; }
+.header { 
+  margin-left: 40px;
+  display: flex; 
+  color: rgb(120, 77, 160);;
+  justify-content: space-between; 
+  font-size: 20px; 
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 8px;
+  font-weight: 600px;
+}
+
+.image-side{
+  
+  text-align:center;
+}
+progress{
+ width: 40%;
+ margin-left: 40px;
+}
+
+  </style>
+</head>
+<body>
+  
+   <nav class="nav">
+    <p><img class="image" src="https://bridge512.qodeinteractive.com/wp-content/uploads/2024/02/new-logo-bridge-header-1.png"></p>
+    <ul class="nav-links">
+      <li><a href="#" style="color: orange;">HOME</a></li>
+      <li><a href="#">PAGES</a></li>
+      <li><a href="#">OUR SERVICES</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+  </nav>
+  <hr>
+  
+
+  <h2>Creative App Ideas</h2>
+
+  <div class="skill">
+    <div class="header"><pre>Information Architecture                 70%</pre> </div>
+<progress value="70" max="100"></progress>  </div>
+
+  <div class="skill">
+    <div class="header"><pre>App Development                                         97%</pre> </div>
+  <progress value="97" max="100"></progress>
+  </div>
+
+  <div class="skill">
+    <div class="header"><pre>User Interface                                       92%</pre></div>
+ <progress value="92" max="100"></progress>
+  </div>
+
+  <div class="skill">
+    <div class="header"><pre>Total Memory Usage                    67%</pre></div>
+  <progress value="65" max="100"></progress>
+  </div>
+
+<div class="image-side">
+        <img src="assets/home-1-phone-11.png" width="600px" height="500px">
+    </div>
+
+
+
+
+</body>
+</html>

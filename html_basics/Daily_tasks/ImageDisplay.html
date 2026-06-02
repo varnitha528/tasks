@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Display</title>
+  <style>
+    body {
+  font-family:Arial, Helvetica, sans-serif; 
+  color: #333;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #4b44bd;
+  padding: 10px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.block-layout img {
+  display: block;
+  margin: 10px auto;
+}
+
+.flex-layout {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  justify-items: center;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>Image Display Arrangement</h1>
+
+  <section>
+    <h2>Images as Block (display: block)</h2>
+    <p>Each image takes its own line and stacks vertically.</p>
+    <div class="block-layout">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Images in Flexbox (display: flex)</h2>
+    <p>Images sit in a row and are spaced evenly.</p>
+    <div class="flex-layout">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Images in Grid (display: grid)</h2>
+    <p>Organized into a 3-column structure.</p>
+    <div class="grid-layout">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+      <img src="assets/download.jpg" alt="Sample">
+    </div>
+  </section>
+</div>
+</body>
+</html>

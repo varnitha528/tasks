@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+       font-family: 'Courier New', Courier, monospace;
+       background-color: black;
+    }
+    h1{
+      text-align: center;
+      font-size:50px;
+      padding: 30px;
+      color: white;
+    }
+    .gallery{
+      width: 100%;
+      height: 300px;
+      background-color: antiquewhite;
+    }
+    .grid{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      overflow: hidden;
+    }
+    .grid1{
+      position: relative;
+       display: block;
+    }
+    .grid1 img{
+      object-fit:fill;
+    }
+    .content{
+      width: 90%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 81%;
+      background-color: transparent;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+    }
+    .content p{
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: transparent;
+      text-align: center;
+      text-align: left;
+    }
+    .content a{
+      color: orange;
+      text-decoration: none;
+          background: transparent;
+          font-weight: bolder;
+    }
+    .content:hover{
+      cursor: pointer;
+      transform: translateY(-35px);
+       transition: transform 0.3s ease;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Shaping the Future with AI at the Core</h1>
+  <div class="gallery">
+    <div class="grid">
+     <div class="grid1">
+       <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS7zEX_w4p8ev8Fv6sl2DTcZdKhfjiYykEznQ0CNyOUw9P2iyam" width="250px" height="300px">
+      <div class="content">
+        <p>Agentic AI in Manufacturing: The 5-Stage Blueprint for an Autonomous Industry</p>
+        <a href="#">Read More</a>
+      </div>
+     </div>
+
+
+     <div class="grid1">
+       <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS-XOKo4zuhsB1RZ9ZlG5KSeOKiTQ4jlbnIGbFPUzvp5LId17JF" width="250px" height="300px">
+      <div class="content">
+        <p>Professional Services in 2026: 5 Trends Powering the Next Frontier</p>
+        <a href="#">Read More</a>
+      </div>
+     </div>
+
+
+     <div class="grid1">
+       <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQphV1nOpXqIuQM_ITncaP1RPEfaRj99ZkD1EAHYn2dr6jHpm54" width="250px" height="300px">
+      <div class="content">
+        <p>The Future of the Hi-Tech Industry: 6 Trends That Will Define 2026</p>
+        <a href="#">Read More</a>
+      </div>
+     </div>
+      
+
+    <div class="grid1">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVEiZTZVQzxIg7ijU9P6YPeEFnerLjlREvSKsX9T9FJ8qo0bB" width="250px" height="300px">
+      <div class="content">
+        <p>How Gen AI and Agentic AI Are Transforming the London Market Insurance Lifecycle</p>
+        <a href="#">Read More</a>
+      </div>
+     </div>
+      
+
+    <div class="grid1">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNm-4cTvB6tT8bW_Sbhv7Gzc9dqjME29gygYXZsXQK4iDFtCXP" width="250px" height="300px">
+      <div class="content">
+        <p>Agentic AI in CPG: Turning the Back Office into the Frontline</p>
+        <a href="#">Read More</a>
+      </div>
+     </div>
+   
+      
+      
+    </div>
+  </div>
+
+</body>
+</html>
