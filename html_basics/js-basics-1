@@ -1,0 +1,397 @@
+Javascript basics:
+alert('good morning!');
+document.body.innerHTML='varnitha kunigiri';
+20-5
+Output: 15
+2+2-5
+Output: -1
+document.body.innerHTML=''; // blank page
+
+Math : 
+Math.round(2.2)
+Strings:
+‘Hi’
+typeof ‘hi’
+‘Hi’+9
+Output: ‘Hi9’
+‘$’+52.54+45.52
+Output : ‘$52.5445.52’   // converts into string
+'Items('+(1+1)+'):$' + (23.23+4); 
+Output: 'Items(2):$27.23'
+
+Strings:
+  'My name is : varnitha kunigiri'
+'My name is : varnitha kunigiri'
+'Total cost: $'+ (5+3)
+'Total cost: $8'
+`total cost: $${3+4}`
+'total cost: $7'
+alert('total cost: $7');
+`total cost: $${Math.round(5.99+2.95)}`
+'total cost: $9'
+alert(`total cost: $${Math.round(5.99+2.95)} \n Thank you , come visit again!`);
+
+HTML & CSS review console.log():
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.btn{
+  background-color:red;
+  border:none;
+  border-radius:4px;
+  padding:10px 10px;
+  color:white;
+  cursor:pointer;
+}
+  </style>
+</head>
+<body>
+ 
+<button class="btn">Hello</button>
+<p> this is <button class="btn" onclick="alert('open page!')">world</button> paragraph</p>
+
+
+
+
+<script>
+ 
+
+
+ console.log('some'+'text');
+ console.log('this will appear in the console tab in chrome');
+ // alert('open page!'); // runs when the page is loaded.
+</script>
+</body>
+</html>
+
+Exercise on above topic:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+
+.add{
+  background-color: yellow;
+  border: none;
+  padding: 10px;
+}
+.buy{
+  background-color: orange;
+  border: none;
+  padding: 10px;
+}
+  </style>
+</head>
+<body>
+<h3>Adults Plain Cotton T-shirt</h3>
+<p>Price:$7.99</p>
+<button title="buttons" class="add">Add to cart</button>
+<button class="buy" onclick="alert('Loading!')">Buy now</button>
+<script>
+alert('Purchased!');
+</script>
+</body>
+</html>
+
+Variables: 
+Const  -> bydefault ,can’t reassign and overriden
+Let  -> can’t redeclare, can be overriden
+Var -> can redeclare,overriden
+
+  Example  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Quantity</title>
+</head>
+<body>
+  <h1>Cart Quantity</h1>
+  <button onclick="
+    console.log(`Cart Quantity:  ${cartQuantity}`);
+    ">Show Quantity</button>
+    <button onclick="
+    cartQuantity -= 2;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">-2</button>
+  <button onclick="
+    cartQuantity -= 3;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">-3</button>
+  <button onclick="
+  cartQuantity = cartQuantity+1;
+    console.log(`Cart Quantity:  ${cartQuantity}`);
+    ">Add to Cart</button>
+  <button onclick="
+    cartQuantity = cartQuantity+2;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+2</button>
+  <button onclick="
+    cartQuantity = cartQuantity+3;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+3</button>
+  <button onclick="
+  cartQuantity += 4;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+4</button>
+  <button onclick="
+  cartQuantity += 5;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+5</button>
+  <button onclick="
+  cartQuantity -= 1;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Remove from Cart</button>
+  <button onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset!');
+  console.log(`Cart Quantity: ${0}`);
+  ">Reset Cart</button>
+  <script>
+    let cartQuantity =0;
+  </script>
+</body>
+</html>
+
+
+
+Other exercise:
+ <script>
+  let name = 'varnitha';
+  console.log(`My name is : `+ name);
+let cost = 1+(2*3)+9;
+console.log(`Cost of food: $ ${cost}`);
+let tax=cost*(0.1);
+console.log(`Tax(10%):$${tax}`);
+let totalCost = cost + tax;
+console.log(`Total cost:$${totalCost}`);
+  </script>
+
+Dataypes :  
+String,number,boolean,array,object,null,undefined
+
+var x= 23;
+document.write(typeof(x)+'<br>');
+document.write(x + '<br>');
+x='hello world';
+document.write(x + '<br>');
+x=false;
+document.write(x + '<br>');
+x=24.3;
+document.write(x + '<br>');
+var y;
+document.write(y + '<br>');
+x=['a','b','c'];
+document.write(x + '<br>');
+ var x={name:'varnitha', age:23, nationality:'indian'};
+document.write(x + '<br>');
+document.write(x.name + '<br>');
+document.write(x.age + '<br>');
+document.write(x.nationality + '<br>');
+Output: 
+number
+23
+hello world
+false
+24.3
+undefined
+a,b,c
+[object Object]
+varnitha
+23
+indian 
+
+Operators:
+
+Arithmetic Operators   +-*/% **
+Assignment Operators  +=,-=,/=
+Comparison Operators
+Logical Operators
+And more ...
+
+
+
+Comparison operators:
+== 	===	!=	!==	<	>	<=	>=
+console.log(10 == 10);//true
+console.log('10' == 10);//true
+console.log(10 === 10);//true
+console.log('10' === 10);// false datatype is diff
+console.log(6 != 6);//false
+console.log(6 !='6');//false
+console.log(6 !=='6');//true datatype is diff
+console.log(6 > 9);//false
+console.log(6 >= 5);//true
+
+Logical operators:(3)
+&&	||	!
+var x = 20;
+if(x >= 18 && x <= 21)
+{
+  console.log('you are eligible!'); //you are eligible!
+}
+
+var x = 25;
+if(x >= 18 || x <= 21)
+{
+  console.log('you are eligible!'); //you are eligible!
+}
+
+
+
+var age=25;
+console.log(!(age<18)); // true
+
+
+
+
+
+Console.log Intro:
+console.log();    console.table();	console.error();	console.warn();	console.clear();
+Eg:   
+var x = 10;
+console.time('test');
+console.log(x);
+console.table([3,4,5]);
+console.error(`this is error!`);
+console.warn("this is just warning");
+//console.clear();
+console.timeEnd('test');
+
+
+document.getelementbyId():
+document.getElementById("main");
+document.getElementById("main").innerHTML;
+
+If condition:
+If and if else:
+
+
+var a =18;
+var b=30;
+if(a>b)
+{
+  console.log(a+' is greater number');
+}
+else{
+   console.log(b+' is greater number');
+}
+
+
+
+If else if :  
+var x = 54;
+
+
+if(x >=80 && x <=100)
+{
+  console.log("merit");
+}
+else if(x >=60 && x <=79)
+{
+  console.log("1st division");
+}
+else if(x >=45 && x <=59)
+{
+  console.log("2nd division");
+}
+else if(x >=33 && x <=44)
+{
+  console.log("3rd division");
+}
+else if(x < 33 && x >=0)
+{
+  console.log("Fail!");
+}
+else{
+  console.log("enter valid percentage ");
+}
+ 
+Ternary operator : 
+Condition ? true stmt : false stmt;
+var x = 45;
+var y = (x >=18)? 'eligible':"not eligible";
+console.log(y);
+
+Merit example using ternary operator:
+var x =75;
+var y = (x>=80 && x<=100)? "merit":
+        (x >=60 && x <=79)? "1st division":
+        (x >=45 && x <=59)? "2nd division":
+        (x >=33 && x <=44)? "3rd division":
+        (x < 33 && x >=0)? "fail": "enter valid number";
+console.log(y);
+
+Switch case:
+var day=5;
+switch(day)
+{
+  case 1: document.write("monday");
+  break;
+  case 2: document.write("tuesday");
+  break;
+  case 3: document.write("wednesday");
+  break;
+  case 4: document.write("thrusday");
+  break;
+  case 5: document.write("friday");
+  break;
+  case 6: document.write("saturday");
+  break;
+  case 7: document.write("sunday");
+  break;
+  default: document.writ
+e("enter between 1 to 7");
+}
+
+
+
+Loops:
+
+For loop 
+for(let i=0;i<10;i++)
+{
+  document.write(i+'<br>');
+}
+While loop
+
+
+
+
+
+
+
+Alert box:
+alert('hello this is alert box');//ok
+Confirm box:
+confirm('Do you like js?');//ok cancel
+Prompt box:
+var x = prompt('do u like js?');  //gets input from user
+console.log(x);
+Functions:  
+function funExample(){
+document.write('this is function');
+}
+funExample()  //this is function
+
+Function with parameter:
+function add(x,y){
+  document.write(x+y);
+}
+add(12,12);  //24
+
+function person(firstname='name' , lastname='surname')
+{
+  document.write(firstname +' ' + lastname);
+}
+person('varnitha','kunigiri');  // varnitha kunigiri
