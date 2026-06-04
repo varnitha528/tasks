@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+document.write("<h1>Operators</h1>");
+document.write("<h2>Arithematic Operators</h2>");
+let x=5;
+let y=10;
+document.write('x=5 and y=10<br>');
+document.write(x+y +"<br>");
+document.write(x-y +"<br>");
+document.write(x*y +"<br>");
+document.write(x**y +"<br>");
+document.write(x/y +"<br>");
+document.write(x%y +"<br>");
+document.write(x++ +"<br>");
+document.write(x-- +"<br>");
+
+
+
+document.write("<h2>String concadenation</h2>");
+document.write(5 + 5);
+document.write('<br>');
+document.write(5 + '5');
+document.write('<br>');
+document.write('hello'+ 5);
+
+
+
+document.write("<h2>Assignment Operators</h2>");
+document.write('a=10 and b=20 <br>');
+let a =10;
+let b=20;
+var c = a+=b;
+document.write(c +'<br>');
+var c = a-=b;
+document.write(c +'<br>');
+
+
+
+
+document.write("<h2>Comaprision Operators</h2>");
+let m = 5;
+document.write(m == 5);document.write('<br>');
+document.write(m == 8);document.write('<br>');
+document.write(m === 5);document.write('<br>');
+document.write(m === '5');document.write('<br>');
+document.write(m < 5);document.write('<br>');
+document.write(m <= 5);document.write('<br>');
+document.write(m > 5);document.write('<br>');
+document.write(m >= 5);document.write('<br>');
+
+
+
+document.write("<h2>Conditional Operators</h2>");
+document.write("<h2>if  and x =18 </h2>");
+let age=18;
+if(age>=18)
+{
+  document.write("Eligible to vote");
+}
+else{
+  document.write("Not eligible to vote");
+}
+
+
+document.write("<h2> else if  and x =10 </h2>");
+age=10;
+if(age>=18)
+{
+  document.write("Eligible to vote");
+}
+else if(age >=0 && age <18){
+  document.write("Not eligible to vote");
+}
+else{
+  document.write("Enter valid age!");
+}
+
+document.write("<h2> switch  and x =49 </h2>");
+age=49;
+switch(true){
+  case (age>=18):
+    document.write("Eligible to vote"); 
+    break;
+    case (age >=0 && age<18):
+    document.write("Not Eligible to vote");
+    break;
+    default:
+      document.write("enter valid age");
+}
+
+
+document.write("<h2>Ternary Operator and x =18 </h2>");
+age=18;
+document.write((age>=18)? "Eligible to vote":"Not Eligible to vote");
+  </script>
+</body>
+</html>
