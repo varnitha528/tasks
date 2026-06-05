@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Calculator</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding:20px;
+        }
+
+        input{
+            display:block;
+            margin:10px 0;
+            padding:8px;
+        }
+
+        button{
+            padding:10px 15px;
+            cursor:pointer;
+        }
+
+        #result{
+            margin-top:20px;
+            border:1px solid #ccc;
+            padding:15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Marks Calculator</h2>
+
+    <input type="text" id="name" placeholder="Student Name">
+
+    <input type="number" id="sub1" placeholder="Subject 1 Marks">
+
+    <input type="number" id="sub2" placeholder="Subject 2 Marks">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+
+<script>
+
+function calculate(){
+
+    var name = document.getElementById("name").value;
+    var sub1 = Number(document.getElementById("sub1").value);
+    var sub2 = Number(document.getElementById("sub2").value);
+
+    // Arithmetic Operators
+    var total = sub1 + sub2;
+    var average = total / 2;
+
+    // Assignment Operator
+    var bonusMarks = total;
+    bonusMarks += 5;
+
+    // Comparison Operators
+    var greater = sub1 > sub2;
+    var equal = sub1 == sub2;
+
+    // Logical Operators
+    var bothPass = (sub1 > 35 && sub2 > 35);
+    var oneAbove90 = (sub1 > 90 || sub2 > 90);
+
+    // Increment & Decrement
+    var incSub1 = sub1;
+    incSub1++;
+
+    var decSub2 = sub2;
+    decSub2--;
+
+    // Ternary Operator
+    var result = (average >= 35) ? "Pass" : "Fail";
+
+    // Grade System
+    var grade;
+
+    if(average >= 90){
+        grade = "A Grade";
+    }
+    else if(average >= 75){
+        grade = "B Grade";
+    }
+    else if(average >= 60){
+        grade = "C Grade";
+    }
+    else if(average >= 35){
+        grade = "D Grade";
+    }
+    else{
+        grade = "Fail";
+    }
+
+    document.getElementById("result").innerHTML =
+    "<h3>Student: " + name + "</h3>" +
+    "<p>Total Marks: " + total + "</p>" +
+    "<p>Average Marks: " + average + "</p>" +
+    "<p>Total + 5 Bonus Marks: " + bonusMarks + "</p>" +
+    "<p>Subject 1 > Subject 2: " + greater + "</p>" +
+    "<p>Subject 1 == Subject 2: " + equal + "</p>" +
+    "<p>Both Subjects > 35: " + bothPass + "</p>" +
+    "<p>At Least One Subject > 90: " + oneAbove90 + "</p>" +
+    "<p>Subject 1 after ++ : " + incSub1 + "</p>" +
+    "<p>Subject 2 after -- : " + decSub2 + "</p>" +
+    "<p>Result: " + result + "</p>" +
+    "<p>Grade: " + grade + "</p>";
+}
+
+</script>
+
+</body>
+</html>

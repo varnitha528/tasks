@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student Marks Calculator</title>
+  <style>
+    input {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+      border: none;
+      background-color: orange;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: rgb(255, 136, 0);
+    }
+
+    #result,
+    #result2 {
+      margin-top: 20px;
+      width: 500px;
+      border: 1px solid #ccc;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Task 1 -->
+
+   <h2> Task 1:Student Marks Calculator</h2>
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Student Name">
+  <label for="sub1">Subject 1:</label>
+  <input type="number" id="sub1" placeholder="Subject 1 Marks">
+  <label for="sub2">Subject 2:</label>
+  <input type="number" id="sub2" placeholder="Subject 2 Marks">
+  <button onclick="calculate()">Calculate</button>
+
+  <div id="result"></div>
+ 
+
+<!-- Task 2 -->
+ 
+    <h2> Task 2:Age Eligibility Checker</h2>
+  <label for="ename">Name:</label>
+  <input type="text" placeholder="Name" id="ename">
+  <label for="age">Age:</label>
+  <input type="number" placeholder="Age" id="age">
+  <button onclick="calculateAge()">Calculate Age</button>
+  <div id="result2"></div>
+
+  <script>
+
+    // task1
+    function calculate() {
+
+      var name = document.getElementById("name").value;
+      var sub1 = Number(document.getElementById("sub1").value);
+      var sub2 = Number(document.getElementById("sub2").value);
+
+      // Arithmetic Operators
+      var total = sub1 + sub2;
+      var average = total / 2;
+
+      // Assignment Operator
+      var bonusMarks = total;
+      bonusMarks += 5;
+
+      // Comparison Operators
+      var greater = sub1 > sub2;
+      var equal = sub1 == sub2;
+
+      // Logical Operators
+      var bothPass = (sub1 > 35 && sub2 > 35);
+      var oneAbove90 = (sub1 > 90 || sub2 > 90);
+
+      // Increment & Decrement
+      var incSub1 = sub1;
+      incSub1++;
+
+      var decSub2 = sub2;
+      decSub2--;
+
+      // Ternary Operator
+      var result = (average >= 35) ? "Pass" : "Fail";
+
+      // Grade System
+      var grade;
+
+      if (average >= 90) {
+        grade = "A Grade";
+      }
+      else if (average >= 75) {
+        grade = "B Grade";
+      }
+      else if (average >= 60) {
+        grade = "C Grade";
+      }
+      else if (average >= 35) {
+        grade = "D Grade";
+      }
+      else {
+        grade = "Fail";
+      }
+      document.getElementById("result").innerHTML =
+        "<h3>Student: " + name + "</h3>" +
+        "<p>Total Marks: " + total + "</p>" +
+        "<p>Average Marks: " + average + "</p>" +
+        "<p>Total + 5 Bonus Marks: " + bonusMarks + "</p>" +
+        "<p>Subject 1 > Subject 2: " + greater + "</p>" +
+        "<p>Subject 1 == Subject 2: " + equal + "</p>" +
+        "<p>Both Subjects > 35: " + bothPass + "</p>" +
+        "<p>At Least One Subject > 90: " + oneAbove90 + "</p>" +
+        "<p>Subject 1 after ++ : " + incSub1 + "</p>" +
+        "<p>Subject 2 after -- : " + decSub2 + "</p>" +
+        "<p>Result: " + result + "</p>" +
+        "<p>Grade: " + grade + "</p>";
+    }
+
+
+    // task 2
+    function calculateAge() {
+      let ename = document.getElementById("ename").value;
+      let age = Number(document.getElementById("age").value);
+      let ans = (age >= 18 && age < 21) ? "Eligible to vote" :
+        (age >= 21 && age < 59) ? "Eligible to drive" :
+          (age >= 18 && age <= 60) ? "Working age" : "Not working age";
+      document.getElementById("result2").innerHTML =
+        ename + " is of " + age + " and " + ans;
+    }
+
+  </script>
+</body>
+
+</html>
