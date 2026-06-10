@@ -12,24 +12,24 @@
   <script>
 
 
-    // 1.for loop (tables)
+    // 1.for loop (table)
 
-    // var table = 3;
-    // for (let i = 1; i <= 10; i++) {
-    //   console.log(table + " x " + i + " = " + (table * i));
-    // }
+    var table = 3;
+    for (let i = 1; i <= 10; i++) {
+      console.log(table + " x " + i + " = " + (table * i));
+    }
 
 
 
 
     // 2.for loop (factorial of number)
 
-    // var num = 5;
-    // var fact = 1;
-    // for (let i = 1; i <= num; i++) {
-    //   fact = fact * i;
-    // }
-    // console.log("factorial of " + num + " is " + fact);
+    var num = 5;
+    var fact = 1;
+    for (let i = 1; i <= num; i++) {
+      fact = fact * i;
+    }
+    console.log("factorial of " + num + " is " + fact);
 
 
 
@@ -38,27 +38,27 @@
 
     // 3.while loop  (sum until 100)
 
-    // var i = 1;
-    // var sum = 0;
-    // while (i <= 100) {
-    //   sum += i;
-    //   i++;
-    // }
-    // console.log(sum);
+    var i = 1;
+    var sum = 0;
+    while (i <= 100) {
+      sum += i;
+      i++;
+    }
+    console.log("sum until 100 " + sum);
 
 
 
 
     // 4.while loop (even numbers)
 
-    // var num = 40;
-    // var i = 1;
-    // while (i <= num) {
-    //   if (i % 2 == 0) {
-    //     console.log(i + " is even number");
-    //   }
-    //   i++;
-    // }
+    var num = 20;
+    var i = 1;
+    while (i <= num) {
+      if (i % 2 == 0) {
+        console.log(i + " is even number");
+      }
+      i++;
+    }
 
 
 
@@ -66,11 +66,11 @@
 
     // 5.do while (print 10 to 1)
 
-    // var i = 10;
-    // do {
-    //   console.log(i);
-    //   i--;
-    // } while (i >= 1)
+    var i = 10;
+    do {
+      console.log(i);
+      i--;
+    } while (i >= 1)
 
 
 
@@ -79,12 +79,12 @@
 
     // 6. do while( unlock account)
 
-    // var i = 1;
-    // do {
-    //   console.log("Attempt" + i);
-    //   i++;
-    // } while (i <= 3)
-    // console.log("Account is locked!");
+    var i = 1;
+    do {
+      console.log("Attempt" + i);
+      i++;
+    } while (i <= 3)
+    console.log("Account is locked!");
 
 
 
@@ -92,14 +92,14 @@
 
     // 7. for of (count vowels)
 
-    // var arr = ['a', 'b', 'd', 'i', 'e', 'f', 'i'];
-    // var count = 0;
-    // for (var i of arr) {
-    //   if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u') {
-    //     count++;
-    //   }
-    // }
-    // console.log(count);
+    var arr = ['a', 'b', 'd', 'i', 'e', 'f', 'i'];
+    var count = 0;
+    for (var i of arr) {
+      if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u') {
+        count++;
+      }
+    }
+    console.log(count);
 
 
 
@@ -108,14 +108,14 @@
 
     //8. for of (largest number)
 
-    // var nums = [23, 34, 54, 2, 4, 73, 88];
-    // var largest = nums[0];
-    // for (var i of nums) {
-    //   if (i > largest) {
-    //     largest = i;
-    //   }
-    // }
-    // console.log(largest + " is largest number in array");
+    var nums = [23, 34, 54, 4, 73, 88, 99];
+    var largest = nums[0];
+    for (var i of nums) {
+      if (i > largest) {
+        largest = i;
+      }
+    }
+    console.log(largest + " is largest number in array");
 
 
 
@@ -124,14 +124,14 @@
 
     // 9. for in (employee details)
 
-    // var employee = {
-    //   name: 'varnitha',
-    //   department: 'it',
-    //   salary: 20000
-    // };
-    // for (var item in employee) {
-    //   console.log(employee[item]);
-    // }
+    var employee = {
+      name: 'varnitha',
+      department: 'it',
+      salary: 20000
+    };
+    for (var item in employee) {
+      console.log(employee[item]);
+    }
 
 
 
@@ -140,17 +140,17 @@
 
     // 10. for in (count objects)
 
-    // var car = {
-    //   brand: 'toyota',
-    //   mode: 'camry',
-    //   year: 2024,
-    //   color: 'red'
-    // };
-    // var count = 0;
-    // for (var items in car) {
-    //   count++;
-    // }
-    // console.log(count);
+    var car = {
+      brand: 'toyota',
+      mode: 'camry',
+      year: 2024,
+      color: 'red'
+    };
+    var count = 0;
+    for (var items in car) {
+      count++;
+    }
+    console.log(count);
 
 
 
@@ -158,21 +158,23 @@
 
 
     // 11. for each (total expenses)
-    // var expenses = [1000, 2000, 3000, 4000, 5000];
-    // var sum = 0;
-    // expenses.forEach(function (num) {
-    //   sum += num;
-    // });
 
-    // console.log(sum);
+    var expenses = [1000, 2000, 3000, 4000, 5000];
+    var sum = 0;
+    expenses.forEach(function (num) {
+      sum += num;
+    });
+
+    console.log(sum);
 
 
     // 12. for each (print array)
-    // var fruits = ["Apple", "Banana", "Mango"];
 
-    // fruits.forEach(function (item) {
-    //   console.log(item);
-    // });
+    var fruits = ["Apple", "Banana", "Mango"];
+
+    fruits.forEach(function (item) {
+      console.log(item);
+    });
 
 
 
