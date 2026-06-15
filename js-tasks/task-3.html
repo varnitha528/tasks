@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays-Task</title>
+</head>
+
+<body>
+
+  <script>
+
+
+
+    // map() → transform data
+    // filter() → select multiple items
+    // find() → select one item
+    // reduce() → find totals, maximums, minimums, etc.
+
+
+
+    // Dataset 1: Movies
+    const movies = [
+      { id: 1, title: "Bahubali", rating: 9 },
+      { id: 2, title: "Pushpa", rating: 8 },
+      { id: 3, title: "RRR", rating: 10 },
+      { id: 4, title: "Salaar", rating: 7 }
+    ];
+
+    // 1. Create a new array containing only movie titles.
+    let titleX = movies.map(movie => movie.title);
+    console.log(titleX);
+
+    //2. Create a new array containing only movie ratings.
+    let ratingX = movies.map(rate => rate.rating);
+    console.log(ratingX);
+
+    //3. Increase every movie rating by 1.
+    const result = movies.map(movie => movie.rating + 1);
+    console.log(result);
+
+
+    // 4. Get all movies with rating greater than 8.
+    const greater = movies.filter(movie => movie.rating > 8);
+    console.log(greater);
+
+    // 5. Get all movies with rating less than 9.
+    const lesser = movies.filter(movie => movie.rating < 9);
+    console.log(lesser);
+
+    // 6. Find the movie with ID 3.
+    const movieid = movies.find(movie => movie.id === 3);
+    console.log(movieid);
+
+    //7. Find the movie with title “Pushpa”.
+    const movieName = movies.find(movie => movie.title === 'Pushpa');
+    console.log(movieName);
+
+    //8. Calculate the total of all movie ratings.
+    const totalRating = movies.reduce((sum, movie) => sum + movie.rating, 0);
+    console.log(totalRating);
+
+    //41. Create an array of movie titles in uppercase.
+    let titleUpper = movies.map(movie => movie.title.toUpperCase());
+    console.log(titleUpper);
+
+    //44. Get all movies whose title length is greater than 5.
+    let greater5 = movies.filter(movie => movie.title.length > 5);
+    console.log(greater5);
+
+    //49. Find the movie with the highest rating.
+    const highestRating = movies.reduce((max, movie) => movie.rating > max.rating ? movie : max);
+    console.log(highestRating);
+    console.log('---------------------------------------------------------');
+
+  </script>
+
+
+
+
+
+  <script>
+
+    // Dataset 2: Products
+    const products = [
+      { id: 1, name: "Laptop", price: 50000 },
+      { id: 2, name: "Mouse", price: 500 },
+      { id: 3, name: "Keyboard", price: 1500 },
+      { id: 4, name: "Monitor", price: 12000 }
+    ];
+
+    //9. Create an array containing only product names.
+    let productNames = products.map(prod => prod.name);
+    console.log(productNames);
+
+    // 10. Create an array containing only product prices.
+    let productPrices = products.map(prod => prod.price);
+    console.log(productPrices);
+
+    //11. Increase every product price by ₹1000.
+    const incPrice = products.map(prod => prod.price + 1000);
+    console.log(incPrice);
+
+    //12. Get all products costing more than ₹1000.
+    const moreThan = products.filter(prod => prod.price > 1000);
+    console.log(moreThan);
+
+    //13. Get all products costing less than ₹10000.
+    const lessThan = products.filter(prod => prod.price < 10000);
+    console.log(lessThan);
+
+    //14. Find the product with ID 2.
+    const prodId = products.find(prod => prod.id === 2);
+    console.log(prodId);
+
+    //15. Find the product named “Monitor”.
+    const prodName = products.find(prod => prod.name === 'Monitor');
+    console.log(prodName);
+
+    // 16. Calculate the total cost of all products.
+    const totalCost = products.reduce((sum, prod) => sum + prod.price, 0);
+    console.log(totalCost);
+
+    //42. Create an array of product names in lowercase.
+    let namesLower = products.map(prod => prod.name.toLowerCase());
+    console.log(namesLower);
+
+    //46. Find the most expensive product.
+    let expProd = products.reduce((max, prod) => prod.price > max.price ? prod : max);
+    console.log(expProd);
+    console.log('---------------------------------------------------------');
+
+  </script>
+
+
+
+
+
+  <script>
+    //Dataset 3: Cricket Scores
+    const scores = [45, 80, 20, 100, 60];
+
+    //17. Add 10 runs to every score.
+    const add10 = scores.map(scores => scores + 10);
+    console.log(add10);
+
+    //18. Add 5 runs to every score.
+    const add5 = scores.map(scores => scores + 5);
+    console.log(add5);
+
+    //19. Get all scores greater than 50.
+    const greaterThan = scores.filter(scores => scores > 50);
+    console.log(greaterThan);
+
+    //20. Get all scores greater than or equal to 80.
+    const greaterThanEual = scores.filter(scores => scores >= 80);
+    console.log(greaterThanEual);
+
+    //21. Find the first score greater than 70.
+    const firstGreater = scores.find(scores => scores > 70);
+    console.log(firstGreater);
+
+    //22. Find the first score equal to 100.
+    const equal100 = scores.find(scores => scores == 100);
+    console.log(equal100);
+
+    //23. Calculate the total runs scored.
+    const totalRuns = scores.reduce((sum, scores) => sum + scores, 0);
+    console.log(totalRuns);
+
+    //24. Calculate the average score.
+    const avgRuns = (totalRuns) / scores.length;
+    console.log(avgRuns);
+
+    //47. Find the highest cricket score.
+    const highestScore = scores.reduce((max, scores) => scores > max ? scores : max);
+    console.log(highestScore);
+    console.log("-------------------------------------------------------");
+  </script>
+
+
+
+
+
+
+  <script>
+    //Dataset 4: Students
+    const students = [
+      { name: "Ravi", marks: 90 },
+      { name: "Priya", marks: 75 },
+      { name: "Rahul", marks: 40 },
+      { name: "Anu", marks: 95 }
+    ];
+
+    //25. Create an array containing only student names.
+    let stuNames = students.map(stu => stu.name);
+    console.log(stuNames);
+
+    //26. Create an array containing only student marks.
+    let stuMarks = students.map(stu => stu.marks);
+    console.log(stuMarks);
+
+    //27. Add 5 marks to every student.
+    let added = students.map(stu => stu.marks + 5);
+    console.log(added);
+
+    //28. Get students who scored above 80.
+    const above80 = students.filter(stu => stu.marks > 80);
+    console.log(above80);
+
+    //29. Get students who scored below 50.
+    const below50 = students.filter(stu => stu.marks < 50);
+    console.log(below50);
+
+    //30. Find the student named “Rahul”.
+    const stuName = students.find(stu => stu.name === 'Rahul');
+    console.log(stuName);
+
+    //31. Find the first student who scored above 90.
+    const above90 = students.find(stu => stu.marks > 90);
+    console.log(above90);
+
+    // 32. Calculate the total marks of all students.
+    const totalMarks = students.reduce((sum, stu) => sum + stu.marks, 0);
+    console.log(totalMarks);
+
+    //43. Get all students whose names start with “R”.
+    const startWith = students.filter(stu => stu.name.startsWith('R'));
+    console.log(startWith);
+
+    //45. Calculate the combined total of all cricket scores and all student marks.
+    const totalOf2 = totalMarks + totalRuns;
+    console.log(totalOf2);
+
+    //48. Find the student with the highest marks.
+    const highestMarks = students.reduce((max, stu) => stu.marks > max.marks ? stu : max);
+    console.log(highestMarks);
+    console.log("-------------------------------------------------------");
+
+  </script>
+
+
+
+
+
+
+  <script>
+    //Dataset 5: Food Orders
+    const foodOrders = [
+      { item: "Pizza", price: 300 },
+      { item: "Burger", price: 150 },
+      { item: "Biryani", price: 250 },
+      { item: "Ice Cream", price: 100 }
+    ];
+
+
+    //33. Create an array containing only food item names.
+    let fItems = foodOrders.map(orders => orders.item);
+    console.log(fItems);
+
+    //34. Create an array containing only food prices.
+    let fPrice = foodOrders.map(orders => orders.price);
+    console.log(fPrice);
+
+    //35. Increase every food price by ₹50.
+    let incrPrice = foodOrders.map(orders => orders.price + 50);
+    console.log(incrPrice);
+
+    //36. Get all food items costing more than ₹200.
+    let moreeThan = foodOrders.filter(orders => orders.price > 200);
+    console.log(moreeThan);
+
+    //37. Get all food items costing less than ₹250.
+    let lesssThan = foodOrders.filter(orders => orders.price < 250);
+    console.log(lesssThan);
+
+    //38. Find the food item “Biryani”.
+    const fItem = foodOrders.find(orders => orders.item === 'Biryani');
+    console.log(fItem);
+
+    //39. Find the first food item costing more than ₹250.
+    const firstItem = foodOrders.find(orders => orders.price > 250);
+    console.log(firstItem);
+
+    //40. Calculate the total food bill.
+    const totatAmount = foodOrders.reduce((sum, orders) => sum + orders.price, 0);
+    console.log(totatAmount);
+    console.log('---------------------------------------------------------');
+
+  </script>
+
+  <script>
+    //50. Create your own dataset and write 5 custom operations on it.
+
+    const channels = [
+      { name: "T-Series", subscribers: 300000000, category: "Music" },
+      { name: "Telusko", subscribers: 3000000, category: "Programming" },
+      { name: "MrBeast", subscribers: 420000000, category: "Entertainment" },
+      { name: "CodeWithHarry", subscribers: 7000000, category: "Programming" },
+    ];
+
+    // 1. Get all channel names
+    let chaNames = channels.map(channel => channel.name);
+    console.log(chaNames);
+
+    // 2. Add 1 million subscribers to every channel
+    const updatedSubscribers = channels.map(channel => channel.subscribers + 1000000);
+    console.log(updatedSubscribers);
+
+    // 3. Get channels with more than 10 million subscribers
+    const popularChannels = channels.filter(channel => channel.subscribers > 10000000);
+    console.log(popularChannels);
+
+    // 4. Find the channel named "MrBeast"
+    const mrBeast = channels.find(channel => channel.name === "MrBeast");
+    console.log(mrBeast);
+
+    // 5. Find the channel with the highest subscribers
+    const topChannel = channels.reduce((max, channel) => channel.subscribers > max.subscribers ? channel : max);
+    console.log(topChannel);
+
+    console.log('--------------------------------------------------------');
+  </script>
+
+
+
+  <script>
+
+    var str = 'This is varnitha';
+    //1. slice()
+    console.log(str.slice(0, 5));
+    console.log(str.slice(8));
+
+    // 2. substring()
+    console.log(str.substring(5, 7));
+    console.log(str.substring(8));
+
+    // 3. substring()
+    console.log(str.substring(5, 7));
+    console.log(str.substring(8));
+
+    // 4. replace()
+    console.log(str.replace("varnitha", "kunigiri"));
+    console.log(str.replace("varnitha", "blackpink"));
+
+    // 5. replaceAll()
+    console.log(str.replaceAll("varnitha", "blackpink"));
+    console.log(str.replaceAll("is", "of"));
+
+    //6. toUpperCase()
+    console.log(str.toUpperCase());
+    var str1 = "             i Am varnitha           "
+    console.log(str1.toUpperCase());
+
+    //7. toLowerCase()
+    console.log(str.toLowerCase());
+    console.log(str1.toLowerCase());
+
+    //8. concat()
+    console.log(str.concat(str1));
+    console.log(str1.concat(str));
+
+    //9.trim();
+    console.log(str1.trim());
+    console.log(str1.trim(2));
+
+    //10.trimStart()
+    console.log(str.trimStart());
+    console.log(str1.trimStart());
+
+    //11.trimEnd()
+    console.log(str.trimEnd());
+    console.log(str1.trimEnd());
+
+    //12.charAt();
+    console.log(str.charAt(2));
+    console.log(str1.charAt(20));
+
+    //13.charCodeAt();
+    console.log(str.charCodeAt(2));
+    console.log(str1.charCodeAt(19));
+
+    //14.split()
+    console.log(str.split(" "));
+    console.log(str1.split(" "));
+
+    // 15.indexOf()
+    console.log(str.indexOf("v"));
+    console.log(str1.indexOf("v"));
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

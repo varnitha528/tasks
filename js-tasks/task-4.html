@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART WAREHOUSE MANAGEMENT SYSTEM</title>
+</head>
+<body>
+    
+    <script>
+
+const products = [
+{
+name: " wireless mouse" ,
+category: "electronics",
+quantity: 25,
+price: 799
+},
+{
+name: "Gaming Keyboard",
+category: "ELECTRONICS",
+quantity: 8,
+price: 2499
+},
+{
+name: "office chair",
+category: "furniture",
+quantity: 3,
+price: 5999
+},
+{
+name: "LED Monitor",
+category: "Electronics",
+quantity: 15,
+price: 10999
+},
+{
+name:"water bottle",
+category: "home",
+quantity: 50,
+price: 299
+}
+];
+
+//• Remove unwanted spaces from product names.
+let proNames = products.map(product => product.name.trim());
+console.log( proNames);
+
+
+
+//• Convert product names into Proper Case.
+let proNames1 = products.map(product =>
+  product.name
+    .trim()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ")
+);
+console.log(proNames1);
+
+
+
+
+// • Convert category names into UPPERCASE.
+let proNames2 = products.map(product => product.category.toUpperCase());
+console.log(proNames2);
+
+
+
+
+//1. CALCULATE INVENTORY VALUE  For every product calculate:   Inventory Value = Quantity × Price
+const inventoryValue = products.map(product => ({ name : product.name , inventoryValue : product.quantity * product.price}));
+console.log(inventoryValue);
+
+
+
+
+
+
+// 1. DETERMINE STOCK STATUS
+
+// Apply the following rules:
+
+// Quantity > 20      → HIGH STOCK
+
+// Quantity 10–20     → MEDIUM STOCK
+
+// Quantity 1–9       → LOW STOCK
+
+// Quantity = 0       → OUT OF STOCK
+
+const stockStatus = products.map(product =>{
+
+let status;
+
+if(product.quantity > 20){
+    status = 'High Stock';}
+else if(product.quantity >=10){
+    status = "Medium Stock";}
+else if(product.quantity >=1){
+    status ="Low Stock";}
+else {status ="Out of Stock";}
+
+return{
+    name:product.name,
+    quantity: product.quantity,
+    stockStatus :status
+};
+});
+console.log(stockStatus);
+
+
+
+
+
+
+//• Total number of products
+const totalProducts = products.length;
+console.log(totalProducts);
+
+
+
+
+//• Total inventory value
+const totalInventoryValue = products.reduce((total, product) => {
+  return total + (product.quantity * product.price);
+}, 0);
+console.log(totalInventoryValue);
+
+
+
+
+//• Average product price
+const averagePrice =
+  products.reduce((total, product) => total + product.price, 0) /
+  products.length;
+
+console.log(averagePrice);
+
+
+
+//• Most expensive product
+const mostExpensiveProduct = products.reduce((max, product) => {
+  return product.price > max.price ? product : max;
+});
+
+console.log(mostExpensiveProduct);
+
+
+
+
+//cheapest Product 
+const cheapestProduct = products.reduce((min, product) => {
+  return product.price < min.price ? product : min;
+});
+
+console.log(cheapestProduct);
+
+
+
+
+
+
+
+//• Product with highest quantity
+const highestQuantityProduct = products.reduce((max, product) => {
+  return product.quantity > max.quantity ? product : max;
+});
+
+console.log(highestQuantityProduct);
+
+
+
+
+
+
+
+//• Product with lowest quantity
+const lowestQuantityProduct = products.reduce((min, product) => {
+  return product.quantity < min.quantity ? product : min;
+});
+
+console.log(lowestQuantityProduct);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
