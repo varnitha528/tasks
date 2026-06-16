@@ -187,6 +187,115 @@ console.log(lowestQuantityProduct);
 
 
 
+// 1. SEARCH FEATURE
+
+// Create the following variable:
+
+// const keyword = “ele”;
+
+// Display all products whose category contains the keyword.
+
+// Search must be case-insensitive.
+const keyword = "ele";
+let containsEle = products.filter(product =>product.category.toLowerCase().includes(keyword));
+console.log(containsEle);
+
+
+
+
+
+//1. SORTING    Display products:  A. Price: Highest to Lowest   B. Quantity: Lowest to Highest
+const priceSorted = [...products].sort((a, b) => b.price - a.price);
+console.log(priceSorted);
+
+const quantitySorted = [...products].sort((a, b) => a.quantity - b.quantity);
+console.log(quantitySorted);
+
+
+
+
+
+
+//1. TOP PRODUCTS    Display the Top 3 Costliest Products.
+const top3Costliest = [...products]
+  .sort((a, b) => b.price - a.price)
+  .slice(0, 3);
+
+console.log(top3Costliest);
+
+
+
+
+
+//Display warning messages for products whose quantity is less than 5.
+
+// Example:
+
+// WARNING: Office Chair stock is critically low.
+
+
+//1. LOW STOCK ALERT
+
+products
+  .filter(product => product.quantity < 5)
+  .forEach(product => {
+    console.log(`WARNING: ${product.name} stock is critically low.`);
+  });
+
+
+
+//   1. CATEGORY SUMMARY
+
+// Display the number of products available in each category.
+
+// Example:
+
+// ELECTRONICS : 3
+
+// FURNITURE : 1
+
+// HOME : 1
+
+const categorySummary = products.reduce((acc, product) => {
+  const category = product.category.toUpperCase();
+
+  acc[category] = (acc[category] || 0) + 1;
+
+  return acc;
+}, {});
+
+for (let category in categorySummary) {
+  console.log(`${category} : ${categorySummary[category]}`);
+}
+
+
+
+
+
+
+// 1. STOCK VISUALIZATION
+
+// Display stock levels using symbols.
+
+// Example:
+
+// Wireless Mouse    #########################
+
+// Gaming Keyboard   ########
+
+// Office Chair      ###
+
+// LED Monitor       ###############
+
+// Water Bottle      ##################################################
+products.forEach(product => {
+  console.log(
+    `${product.name} ${" # ".repeat(product.quantity)}`
+  );
+});
+
+
+
 
 
 
