@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watches</title>
+
+
+    <style>
+        *{
+           margin: 0; 
+           padding: 0;
+           box-sizing: border-box;
+        }
+        nav{
+            height: 60px;
+            background-color: rgb(5, 5, 162);
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        nav h1{
+              margin-top: 10px;
+            color: white;
+            font-size: 2rem;
+        }
+nav input{
+    width: 200px;
+    height: 20px;
+    place-items: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+nav ul{
+    margin-top: 20px;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+nav li{
+    list-style-type: none;
+    color: white;
+}
+.container{
+    width: 100%;
+    display: flex;
+    margin: 100px;
+    gap: 5rem;
+}
+.left img{
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 10px 20px #ccc;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 1rem;
+    padding: 10px;
+    box-shadow: 0px 10px 20px #ccc;
+
+}
+#btn1, #btn3{
+    cursor: pointer;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+#btn2{
+     padding: 5px 10px;
+    background-color: grey;
+    color: black;
+    border: none;
+    margin-right: 10px;
+     border-radius: 4px;
+}
+.add{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+     border-radius: 8px;
+     cursor: pointer;
+}
+.below{
+    border: 1px #ccc solid;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ccc;
+    margin: 0px 10px;
+}
+.below p{
+    font-size: 15px;
+    margin: 10px 0px;
+}
+.below button{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+}
+    </style>
+</head>
+<body>
+    
+
+<nav>
+    <h1>Timesless Watches</h1>
+    <input type="search" placeholder=" Search....">
+    <ul>
+        <a><li>Shop</li></a>
+        <a><li>New Arrivals</li></a>
+        <a><li>Brands</li></a>
+        <a><li>About</li></a>
+        <a><li>Contact</li></a>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="left">
+
+<img src="https://www.pngitem.com/pimgs/m/115-1156789_watches-png-image-watch-images-png-transparent-png.png" title="Watches Png Image - Watch Images Png, Transparent Png" alt="Watches Png Image - Watch Images Png, Transparent Png" id="compImg" style="display:block; max-width:100%; height:auto; object-fit:contain;">
+
+    </div>
+    <div class="right">
+<h2>ELEGANT LUXURY WATCH</h2>
+<p>PRESTIGE TIME CO. </p>
+<p><strong>$499.99</strong>        $799.99   <strong>38% OFF</strong> </p>
+<p>This luxurious timepiece combines elegance with precision craftsmanship. Perfect for formal occasions or everyday wear, it features premium materials and impeccable design. </p>
+<p>⭐⭐⭐⭐⭐   Rated 4.8/5(286 Reviews)</p>
+    <div class="btn">
+        <button id="btn1">-</button>
+        <button id="btn2">1</button>
+        <button id="btn3">+</button>
+    </div>
+   <button class="add">Add to Bag</button>
+<div class="below">
+    <h4>Limited-Time Offer!</h4>
+    <p>Get an additional 10% off your first purchase when you sign up for our newsletters</p>
+    <button>Sign up Now</button>
+</div>
+</div>
+</div>
+
+</body>
+
+
+<script>
+let cartQuantity =1;
+
+</script>
+</html>
