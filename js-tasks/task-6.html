@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Checker</title>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    width: 300px;
+    height:150px;
+    background-color: white;
+    border-radius: 10px;
+   text-align: center;
+   place-items: center;
+   line-height: 1.6;
+}
+input{
+    padding: 5px;
+    width: 100px;
+    margin-right: 10px;
+}
+button{
+    background-color: orange;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Voting Checker</h1>
+    <p>Enter Your Age: </p>
+    <input id="num" type="number" placeholder="0">
+    <button onclick="check()">Check Result</button>
+    <p id="result">Can Vote!</p>
+</div>
+
+
+
+    <script>
+function check(){
+    let age = Number(document.getElementById("num").value);
+    let ans;
+    if(age >= 18){
+        document.getElementById("result").innerHTML ="Can Vote!"
+    }
+    else{
+        document.getElementById("result").innerHTML = "Opps! Can't Vote!";
+    }
+}
+    </script>
+</body>
+</html>

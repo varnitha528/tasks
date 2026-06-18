@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Calculalator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+     background-color: #f0f0f0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    }
+    .container{
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+        line-height: 1.6;
+        justify-content: center;
+        place-items: center;
+        text-align: center;
+        border: 1px solid green;
+        border-radius: 10px;
+        box-shadow: 0px 0px 30px rgb(136, 234, 136);
+    }
+    input{
+        border: 1px solid green;
+        padding: 10px;
+        width: 100px;
+        margin-left: 15px;
+    }
+    input:focus{
+        outline: none;
+       }
+       button{
+        background-color: green;
+        color: white;
+        padding: 10px 5px;
+        border: 1px solid green;
+        margin-left: 15px;
+        cursor: pointer;
+       }
+</style>
+<body>
+    
+
+
+<div class="container">
+    <h1>Ticket Pricing!</h1>
+    <label for="age">Enter Your Age to avail Discounts:</label><br>
+    <input id="age" placeholder="0" type="number">
+     <select id = "str">
+                    <option  value = "matinee">Matinee Show</option>
+                    <option value = "evening">Second Show</option>
+      </select>
+    
+    <button onclick="check()">Check Price</button>
+    <div id="res"></div>
+</div>
+
+
+<script>
+
+
+
+function check(){
+    let num = Number(document.getElementById("age").value);
+    let showtime = document.getElementById("str").value;
+    let result = document.getElementById("res");
+if(isNaN(num) || age < 0){
+    document.getElementById("res").innerHTML = "Please Enter valid age :)";
+}
+else if(num < 12){
+  document.getElementById("res").innerHTML = "Final Price: ₹5";
+}
+else if(num >= 65){
+  document.getElementById("res").innerHTML = "Final Price: ₹7";
+}
+else if(showtime === "matinee"){
+  document.getElementById("res").innerHTML = "Final Price: ₹10";
+}
+else{
+document.getElementById("res").innerHTML = "Final Price: ₹15 ";
+}
+}
+
+
+
+
+</script>
+</body>
+</html>
