@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow-Following</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        .card{
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 100px;
+            background-color: white;
+            border-radius: 8px;
+            border: #ccc 1px solid;
+            box-shadow: 0px 10px 30px #ccc;
+        }
+        .profile-img{
+            width:200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        #btn{
+            width: 80%;
+            margin-top: 10px;
+            padding: 10px 5px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+    #btn.following {
+         background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="card">
+        <img class="profile-img" src="https://png.pngtree.com/background/20250106/original/pngtree-beautiful-and-cute-cartoon-girl-background-image-for-social-network-profile-picture-image_15587274.jpg">
+        <h2>varnitha</h2>
+        <p>@varnitha__</p>
+        <button id="btn" onclick="toggleFollow()">Follow</button>
+    </div>
+</body>
+<script>
+   function toggleFollow() {
+    const bt = document.getElementById("btn");
+
+    if (bt.innerText === "Follow") {
+        bt.innerText = "Following";
+        bt.classList.add("following");
+    } else {
+        bt.innerText = "Follow";
+        bt.classList.remove("following");
+    }
+}
+</script>
+</html>
