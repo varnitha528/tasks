@@ -1,0 +1,33 @@
+
+Function as object : first class citizen status: 1. Stored in variable 2.passed  to functions 3.returned from function  hence functions in js are objects 
+function exp(car){
+console.log(car);
+}
+let c1 = {
+    name:"BMW",
+    cost: 78.5,
+    milage: 8.9
+};
+// console.log(c1);  // stored in variable
+exp(c1);             // passed to function
+
+
+
+function exp(car){
+let c1 = {
+    name:"BMW",
+    cost: 78.5,
+    milage: 8.9
+}
+return c1;
+}
+console.log(exp()); // returned from function
+Function is object in js : name ,length  and call , apply, bind  are methods.
+function add(a,b){
+    console.log(a+b);
+}
+console.log(add.name);
+console.log(add.length);
+add.call();
+add.apply();
+add.bind();
