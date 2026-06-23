@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>billing system</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 100px;
+            background-color: #ccc;
+        }
+       
+        input{
+           display: flex;
+           flex-direction: column;
+           line-height: 1.6;
+           padding:5px;
+
+        }
+        #cal{
+            padding: 15px 20px;
+            margin: 20px;
+            border: none;
+            background-color: tomato;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        #total{
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>BILL</h1>
+    <label for="name">Product:</label>
+    <input id="name" placeholder="" type="text"><br>
+    <label for="price">Price:</label>
+    <input id="price" placeholder="" type="number"><br>
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" placeholder="" type="number">
+    <button id="cal" onclick="cacl()">Calclate</button>
+    <div id="total"></div>
+    </div>
+</body>
+<script>
+function cacl() {
+    let name = document.getElementById("name").value;
+    let price = Number(document.getElementById("price").value);
+    let quantity = Number(document.getElementById("quantity").value);
+
+    let total = price * quantity;
+
+    document.getElementById("total").innerHTML =
+        `<h3>${name}</h3>
+         <p>Price: ₹${price}</p>
+         <p>Quantity: ${quantity}</p>
+         <p><strong>Total: ₹${total}</strong></p>`;
+}
+</script>
+</html>
