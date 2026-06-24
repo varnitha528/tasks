@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <style>
+
+       button{
+        padding: 5px 10px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        background-color:orange;
+        border-radius: 4px;
+       }
+       .box{
+        background-color: #f0f0f0;
+        width: 500px;
+        height: 550px;
+        place-items: center;
+        text-align: center;
+        padding: 10px;
+       }
+    </style>
+</head>
+<body>
+   <div class="box">
+     <h1>Build Your Pizza</h1>
+    <h4>Crust</h4>
+    <select id="crust">
+        <option>Thin(80.00)</option>
+        <option>Regular(100.00)</option>
+        <option>Stuffed(120.00)</option>
+    </select>
+    <h4>Size</h4>
+    <select id="size">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+    </select>
+    <h4>Toppings</h4>
+    <input type="checkbox" value="Cheese"> <label>Cheese</label>
+    <input type="checkbox" value="Peppers">  <label>Peppers</label>
+    <input type="checkbox" value="Mushroom">  <label>Mushroom</label>
+    <input type="checkbox" value="Chicken"> <label>Chicken</label>
+    <button onclick="calc()">Calculate</button>
+    <h2>Your Receipt</h2>
+    <div id="res"></div>
+    <button>PLACE ORDER</button>
+   </div>
+</body>
+
+    <script>
+    function calc() {
+
+        // Crust prices
+        let crustSelect = document.querySelectorAll("select")[0];
+        let crust = crustSelect.value;
+        let crustPrice = 0;
+
+        if (crust.includes("Thin")) {
+            crustPrice = 80;
+        } else if (crust.includes("Regular")) {
+            crustPrice = 100;
+        } else {
+            crustPrice = 120;
+        }
+
+        // Size prices
+        let sizeSelect = document.querySelectorAll("select")[1];
+        let size = sizeSelect.value;
+        let sizePrice = 0;
+
+        if (size === "Small") {
+            sizePrice = 0;
+        } else if (size === "Medium") {
+            sizePrice = 50;
+        } else {
+            sizePrice = 100;
+        }
+
+        // Toppings
+        let checkboxes = document.querySelectorAll("input[type='checkbox']");
+        let toppingNames = ["Cheese", "Mushroom", "Peppers", "Chicken"];
+
+        let selectedToppings = [];
+        let toppingPrice = 0;
+
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                selectedToppings.push(toppingNames[i]);
+                toppingPrice += 50; 
+            }
+        }
+
+        // Total
+        let total = crustPrice + sizePrice + toppingPrice;
+
+        // Display receipt
+        document.getElementById("res").innerHTML = `
+            <p><b>Crust:</b> ${crust}</p>
+            <p><b>Size:</b> ${size}</p>
+            <p><b>Toppings:</b> ${
+                selectedToppings.length > 0
+                ? selectedToppings.join(", ")
+                : "None"
+            }</p>
+            <p><b>Total:</b> ₹${total}</p>
+        `;
+    }
+</script>
+
+</html>
