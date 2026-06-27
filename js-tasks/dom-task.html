@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 20px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            margin: 50px 0px;
+            transition: all 0.3s ease;
+        }
+        .highlight{
+            width: 250px;
+            height: 250px;
+            background-color: maroon;
+            color: yellow;
+            border-radius: 20px;
+            transform: scale(1.2);
+        }
+        .rounded{
+            border-radius: 50%;
+        }
+        .shadow{
+            box-shadow:  10px 20px 80px greenyellow;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        click the BOX
+    </div>
+    <button id="highlight" >Toggle to highlight</button>
+    <button id="rounded">Toggle Rounded</button>
+    <button id="shadow">Toggle Shadow</button>
+    <button id="reset">RESET</button>
+</body>
+<script>
+const box = document.querySelector(".box");
+document.querySelector("#highlight").onclick = function(){
+    box.classList.toggle("highlight");
+}
+document.querySelector("#rounded").onclick = function(){
+    box.classList.toggle("rounded");
+}
+document.querySelector("#shadow").onclick =function(){
+    box.classList.toggle("shadow");
+}
+document.querySelector("#reset").onclick = function(){
+    box.classList.remove("shadow","rounded","highlight");
+    //  box.classList.remove("rounded");
+    //   box.classList.remove("highlight");
+}
+</script>
+</html>

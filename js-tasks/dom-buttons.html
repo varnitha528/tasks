@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button-js</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .box{
+            padding: 10px;
+            width: 150px;
+            background-color: #f0f0f0;
+            justify-content: space-between;
+            display: flex;
+            align-items: center; 
+            font-size: 20px;
+            border-radius: 8px;
+        }
+       button{
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+<div class="box">
+    <button onclick="decrease()">-</button>
+<span id="res">Add</span>
+<button onclick="increase()">&#x2B;</button>
+</div>
+</body>
+
+
+<script>
+
+
+let content = document.getElementById("res");
+let count =0;
+
+
+function increase(){
+    count++;
+   content.textContent = count;
+}
+function decrease(){
+    if(count > 0){
+        count--;
+    }
+   content.textContent = count;
+}
+</script>
+</html>

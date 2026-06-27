@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example-2</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .highlight{
+            background-color: #607456;
+        }
+        .success{
+            background-color: #428475;
+        }
+        .danger{
+            background-color: #BE1A1A;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="main-heading">Welcome to DOM Practice</h1>
+
+<div id="container">
+    <p class="info">This is paragraph 1 with class info</p>
+     <p class="info">This is paragraph 2 with class info</p>
+     <p class="info">This is paragraph 3 with class info</p>
+    <p class="special">This is a special paragraph</p>
+</div>
+
+<ul id="fruit-list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Orange</li>
+    <li>Mango</li>
+    <li>Cherry</li>
+</ul>
+
+<div id="buttons">
+<button class="btn primary">Button 1</button>
+<button class="btn secondary">Button 2</button>
+<button class="btn primary">Button 3</button>
+</div>
+
+<input type="text" id="username" placeholder="Enter Password..">
+<input type="text" id="email" placeholder="Enter Email..">
+    
+</body>
+
+
+<!-- <script>
+const heading = document.getElementById("main-heading");
+console.log(heading);
+
+const info = document.getElementsByClassName("info");
+// console.log(info.length); 
+for(let i=0;i<info.length;i++){
+    console.log(info[i].textContent.toUpperCase());
+}
+
+const list = document.getElementsByTagName("li");
+// console.log(typeof list);
+for(let i=0;i<list.length;i++){
+    console.log(list[i].textContent);
+}
+
+</script> -->
+
+<!-- <script>
+    //queryselector -> returns only 1st occurance
+    const heading = document.querySelector("#main-heading");
+    console.log(heading);
+    console.log(document.querySelector(".btn"));//returns 1st occurance
+    console.log(document.querySelector("input"));
+    
+    // queryselectorAll -> returns all the occurance in nodelist
+   const input = document.querySelectorAll("input")
+    console.log(input);
+    console.log(input[1]);
+
+</script> -->
+
+<script>
+    //1.textContent (pure text manipulation )
+  const heading = document.querySelector("#main-heading");
+  console.log(heading.textContent);
+  heading.textContent = "Welcome to Document Object Model-DOM Practice";
+  console.log(heading.textContent);
+    //innnerHTML (can use tags to render ,css)(not safe)
+heading.innerHTML ="<em>Welcome to Document Object Model <br>-DOM Practice</em>";
+    //innerText (same as textcontent)
+  //heading.innerText ="<em>Welcome to Document Object Model <br>-DOM Practice</em>";
+  
+  
+ // changing styles
+ //1.Direct style changes
+
+//   heading.style.color = "#88BDA4";
+//   heading.style.backgroundColor = "#E6F2DD";
+//   heading.style.width = "70%";
+//   heading.style.borderRadius = "15px";
+//   heading.style.border = "5px solid #BA6A4C";
+//   heading.style.margin = '0px auto';
+
+  //2.using classList 
+  heading.classList.add("highlight");
+  heading.classList.remove("highlight");
+  heading.classList.toggle("highlight"); // if class is not there add, otherwise remove
+
+
+</script>
+
+
+
+</html>

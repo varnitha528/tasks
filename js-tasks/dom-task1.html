@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTIFICATIONS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        body{
+            background-color: #eee;
+        }
+        .content{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(70, 69, 69);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            line-height: 1.6;
+       }
+       .box{
+        width: 400px;
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+       }
+       button{
+        padding: 10px 8px;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 10px;
+       }
+       #success{
+        background-color: green;
+       }
+       #warning{
+        background-color: orange;
+       }
+       #danger{
+        background-color: red;
+       }
+       #shadow,#rounded,#large,#show,#hide{
+       background-color: black;
+       }
+       #reset{
+        background-color: blue;
+       }
+       .green{
+        background-color: green;
+       }
+       .warning{
+        background-color: orange;
+       }
+       .danger{
+        background-color: red;
+       }
+       .shadow{
+        box-shadow: 10px 20px 60px #f0f0f0;
+       }
+       .rounded{
+        border-radius: 50%;
+       }
+       .large{
+        transform: scale(1.1);
+       }
+       .hide{
+        opacity: 0;
+       }
+       .show{
+        opacity: 1;
+       }
+
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <div class="box"><h1>New Notification</h1></div>
+<div class="box1">
+    <h3>1.Change Type</h3>
+    <button id="success">Success</button>
+    <button id="warning">Warning</button>
+    <button id="danger">Danger</button>
+</div>
+<div class="box2">
+    <h3>2.Apperance</h3>
+    <button id="shadow">Shadow</button>
+    <button id="rounded">Rounded</button>
+    <button id="large">Large</button>
+</div>
+<div class="box3">
+    <h3>3.Visibility</h3>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+</div>
+<div class="box4">
+    <h3>4.Actions</h3>
+    <button id="reset">RESET</button>
+</div>
+</body>
+
+
+<script>
+
+const box = document.querySelector(".box");
+
+document.querySelector("#success").onclick = function(){
+    box.classList.toggle("green");
+}
+document.querySelector("#warning").onclick =function(){
+    box.classList.toggle("warning");
+}
+document.querySelector("#danger").onclick =function(){
+    box.classList.toggle("danger");
+}
+document.querySelector("#shadow").onclick =function(){
+    box.classList.toggle("shadow");
+}
+document.querySelector("#rounded").onclick =function(){
+    box.classList.toggle("rounded");
+}
+document.querySelector("#large").onclick =function(){
+    box.classList.toggle("large");
+}
+document.querySelector("#hide").onclick =function(){
+    box.classList.toggle("hide");
+}
+document.querySelector("#show").onclick =function(){
+    box.classList.toggle("show");
+}
+document.querySelector("#reset").onclick =function(){
+    box.classList.remove("green","warning","danger","shadow","rounded","large","hide","show");
+}
+</script>
+</html>
