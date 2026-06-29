@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            padding: 100px;
+        }
+        #btn{
+            padding: 10px 15px;
+            background-color: green;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            color: white;
+        }
+        #btn.btn{
+            background-color: orange;
+        }
+        .container{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <div id="res">output</div>
+    <div class="container">
+        <button id="minus-btn">-</button>
+        <span id="holder">Add</span>
+        <button id="plus-btn">+</button>
+    </div>
+</body>
+<!-- <script>
+const btn= document.getElementById("btn");
+const res= document.getElementById("res");
+
+btn.addEventListener("click",()=>res.textContent = "button has been clicked!");
+
+function changeColor(){
+    btn.classList.toggle("btn")
+    console.log(res.textContent);
+}
+btn.addEventListener("click",function (e){
+    btn.classList.toggle("btn")
+    console.log(res.textContent);
+    console.log(e.type);
+    console.log(e.target);  //imp -> event delegation
+    console.log(e.currentTarget);
+    console.log(e.clientX,e.clientY);
+
+});
+// btn.removeEventListener("click",changeColor);
+
+
+</script> -->
+
+
+<script>
+const container = document.querySelector(".container");
+const minusBtn = document.querySelector("#minus-btn");
+const plusBtn = document.querySelector("#plus-btn");
+const holder = document.querySelector("#holder");
+
+
+
+
+</script>
+</html>

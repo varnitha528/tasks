@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background-color:#B1D3B9;
+            font-family:sans-serif;
+        }
+
+        .container{
+            display:flex;
+        }
+
+        .order-container,.reciept-container{
+            width:450px;
+            min-height:450px;
+            background:#88BDA4;
+            border-radius:10%;
+            line-height:1.8;
+            padding:20px;
+            margin:100px;
+        }
+
+        select,button{
+            padding:5px 10px;
+            border:none;
+            cursor:pointer;
+            margin-right:5px;
+            border-radius:4px;
+        }
+
+        ul{
+            margin-top:15px;
+            padding-left:20px;
+        }
+
+        .btn-order{
+            padding:10px 15px;
+            font-size:18px;
+            font-weight:bold;
+            background:#cfe4d4;
+        }
+
+        .btn-order:hover{
+            background:#B1D3B9;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="order-container">
+
+<h1>🍕 Build Your Smart Pizza</h1>
+
+<h4>Crust</h4>
+
+<select class="crust">
+<option value="8">🍕 Thin ($8)</option>
+<option value="10">🍕 Regular ($10)</option>
+<option value="12">🍕 Stuffed ($12)</option>
+</select>
+
+<h4>Size</h4>
+
+<label><input type="radio" name="size" value="0" checked> Small</label><br>
+
+<label><input type="radio" name="size" value="2"> Medium</label><br>
+
+<label><input type="radio" name="size" value="4"> Large</label>
+
+<h4>Toppings</h4>
+
+<label><input class="toppings" type="checkbox" value="Cheese"> Cheese</label><br>
+
+<label><input class="toppings" type="checkbox" value="Mushrooms"> Mushrooms</label><br>
+
+<label><input class="toppings" type="checkbox" value="Peppers"> Peppers</label><br>
+
+<label><input class="toppings" type="checkbox" value="Chicken"> Chicken</label>
+
+</div>
+
+<div class="reciept-container">
+
+<h2>📄 YOUR RECEIPT</h2>
+
+<p><b>Pizza :</b> <span id="pizzaName"></span></p>
+
+<hr>
+
+<p><b>Base :</b> $<span id="base">0.00</span></p>
+
+<p><b>Toppings :</b> $<span id="topPrice">0.00</span></p>
+
+<p><b>Subtotal :</b> $<span id="subTotal">0.00</span></p>
+
+<p><b>Discount :</b> 10% (SAVE10)</p>
+
+<hr>
+
+<p><b>Final Total :</b> $<span id="total">0.00</span></p>
+
+<h4>Selected Toppings</h4>
+
+<ul id="list"></ul>
+
+<button class="btn-order">Place Order</button>
+
+</div>
+
+</div>
+
+<script>
+
+const crust=document.querySelector(".crust");
+
+const sizes=document.querySelectorAll('input[name="size"]');
+
+const toppings=document.querySelectorAll(".toppings");
+
+const pizzaName=document.getElementById("pizzaName");
+
+const base=document.getElementById("base");
+
+const topPrice=document.getElementById("topPrice");
+
+const subTotal=document.getElementById("subTotal");
+
+const total=document.getElementById("total");
+
+const list=document.getElementById("list");
+
+
+function calculate(){
+
+let crustPrice=Number(crust.value);
+
+let sizePrice=0;
+
+sizes.forEach(size=>{
+
+if(size.checked){
+
+sizePrice=Number(size.value);
+
+}
+
+});
+
+let toppingPrice=0;
+
+list.innerHTML="";
+
+toppings.forEach(item=>{
+
+if(item.checked){
+
+toppingPrice+=1;
+
+const li=document.createElement("li");
+
+li.textContent=item.value;
+
+list.appendChild(li);
+
+}
+
+});
+
+let basePrice=crustPrice+sizePrice;
+
+let sub=basePrice+toppingPrice;
+
+let final=sub-(sub*0.10);
+
+base.textContent=basePrice.toFixed(2);
+
+topPrice.textContent=toppingPrice.toFixed(2);
+
+subTotal.textContent=sub.toFixed(2);
+
+total.textContent=final.toFixed(2);
+
+let crustName=crust.options[crust.selectedIndex].text.split(" ")[1];
+
+let sizeName="Small";
+
+sizes.forEach(size=>{
+
+if(size.checked){
+
+sizeName=size.parentElement.textContent.trim();
+
+}
+
+});
+
+pizzaName.textContent=sizeName+" "+crustName+" Pizza";
+
+}
+
+crust.addEventListener("change",calculate);
+
+sizes.forEach(size=>{
+
+size.addEventListener("change",calculate);
+
+});
+
+toppings.forEach(item=>{
+
+item.addEventListener("change",calculate);
+
+});
+
+calculate();
+
+</script>
+
+</body>
+</html>
