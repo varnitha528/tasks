@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Quiz</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, sans-serif;
+    background: #1e1e2f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  .quiz-container {
+    background: #2b2b40;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    max-width: 90%;
+  }
+  h2 { margin-top: 0; }
+  #question {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #3a3a55;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+  }
+  .option:hover { background: #4a4a6a; }
+  .option.correct { background: #2ecc71; }
+  .option.wrong { background: #e74c3c; }
+  .option:disabled { cursor: not-allowed; }
+  #next-btn, #restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #5865f2;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+  }
+  #progress {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #aaa;
+  }
+  #score-screen {
+    text-align: center;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>JavaScript Quiz</h2>
+
+  <div id="quiz-screen">
+    <div id="progress"></div>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="next-btn">Next</button>
+  </div>
+
+  <div id="score-screen">
+    <h2>Quiz Completed!</h2>
+    <p id="final-score"></p>
+    <button id="restart-btn" style="display:inline-block;">Restart Quiz</button>
+  </div>
+</div>
+
+<script>
+  const questions = [
+    {
+      question: "What does 'typeof []' return in JavaScript?",
+      options: ["array", "object", "undefined", "list"],
+      answer: 1
+    },
+    {
+      question: "Which keyword is used to declare a block-scoped variable?",
+      options: ["var", "let", "function", "const var"],
+      answer: 1
+    },
+    {
+      question: "What is the output of: console.log(1 + '1')?",
+      options: ["2", "11", "NaN", "Error"],
+      answer: 1
+    },
+    {
+      question: "Which method adds an element to the end of an array?",
+      options: ["push()", "pop()", "shift()", "unshift()"],
+      answer: 0
+    },
+    {
+      question: "What does '===' check in JavaScript?",
+      options: ["Only value", "Only type", "Value and type", "Neither"],
+      answer: 2
+    },
+    {
+      question: "Which function converts a string to an integer?",
+      options: ["parseInt()", "toString()", "Integer()", "valueOf()"],
+      answer: 0
+    },
+    {
+      question: "What is the correct way to write a JavaScript array?",
+      options: [
+        "var colors = (1:'red', 2:'green')",
+        "var colors = ['red', 'green']",
+        "var colors = 'red', 'green'",
+        "var colors = {red, green}"
+      ],
+      answer: 1
+    },
+    {
+      question: "Which event fires when a user clicks an HTML element?",
+      options: ["onchange", "onclick", "onhover", "onkeydown"],
+      answer: 1
+    },
+    {
+      question: "What does JSON stand for?",
+      options: [
+        "JavaScript Object Notation",
+        "Java Standard Object Notation",
+        "JavaScript Oriented Network",
+        "Joint Source Object Notation"
+      ],
+      answer: 0
+    },
+    {
+      question: "Which method is used to select an element by id in JS?",
+      options: [
+        "document.querySelector(id)",
+        "document.getElementById(id)",
+        "document.getElement(id)",
+        "document.select(id)"
+      ],
+      answer: 1
+    }
+  ];
+
+  let currentIndex = 0;
+  let score = 0;
+
+  const questionEl = document.getElementById("question");
+  const optionsEl = document.getElementById("options");
+  const nextBtn = document.getElementById("next-btn");
+  const progressEl = document.getElementById("progress");
+  const quizScreen = document.getElementById("quiz-screen");
+  const scoreScreen = document.getElementById("score-screen");
+  const finalScoreEl = document.getElementById("final-score");
+  const restartBtn = document.getElementById("restart-btn");
+
+  function loadQuestion() {
+    nextBtn.style.display = "none";
+    const current = questions[currentIndex];
+    progressEl.textContent = `Question ${currentIndex + 1} of ${questions.length}`;
+    questionEl.textContent = current.question;
+    optionsEl.innerHTML = "";
+
+    current.options.forEach((optionText, index) => {
+      const btn = document.createElement("button");
+      btn.textContent = optionText;
+      btn.classList.add("option");
+      btn.addEventListener("click", () => selectAnswer(index));
+      optionsEl.appendChild(btn);
+    });
+  }
+
+  function selectAnswer(selectedIndex) {
+    const current = questions[currentIndex];
+    const buttons = document.querySelectorAll(".option");
+
+    buttons.forEach((btn, index) => {
+      btn.disabled = true;
+      if (index === current.answer) {
+        btn.classList.add("correct");
+      } else if (index === selectedIndex) {
+        btn.classList.add("wrong");
+      }
+    });
+
+    if (selectedIndex === current.answer) {
+      score++;
+    }
+
+    nextBtn.style.display = "inline-block";
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex < questions.length) {
+      loadQuestion();
+    } else {
+      showScore();
+    }
+  });
+
+  function showScore() {
+    quizScreen.style.display = "none";
+    scoreScreen.style.display = "block";
+    finalScoreEl.textContent = `You scored ${score} out of ${questions.length}`;
+  }
+
+  restartBtn.addEventListener("click", () => {
+    currentIndex = 0;
+    score = 0;
+    quizScreen.style.display = "block";
+    scoreScreen.style.display = "none";
+    loadQuestion();
+  });
+
+  loadQuestion();
+</script>
+
+</body>
+</html>
