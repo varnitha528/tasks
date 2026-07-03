@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: black;
+            font-family:Arial, Helvetica, sans-serif;
+            height: 100vh;
+            font-size: 25px;
+             display: grid;
+             grid-template-columns: repeat(2,1fr);
+
+        }
+        .box{
+            width:500px;
+            height: 300px;
+            background-color: #85C79A;
+            border-radius: 10px;
+            margin: 50px;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input:focus{
+            outline: none;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            margin: 10px;
+            background-color: #FDEB9E;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #f8dc5e;
+        }
+        /* operations */
+        #operation{
+             padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- greetings -->
+    <div class="box">
+        <h2>Greetings!</h2>
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="enter your name">
+        <button id="btn1" onclick="greet()">Run</button>
+        <div id="output1"></div>
+    </div>
+<!-- operations -->
+    <div class="box">
+        <h2>Operations</h2>
+        <label for="number1">Number 1:</label>
+        <input id="number1" type="number" placeholder="number1">
+        <select id="operation">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="divide">/</option>
+            <option value="pow">Power</option>
+        </select>
+        <label for="number2">Number 2:</label>
+        <input id="number2" type="number" placeholder="number2">
+       <button id="btn2" onclick="runCalculate()">Run</button>
+       <div id="output2"></div>
+
+    </div>
+
+    <!-- Roll Dice -->
+     <div class="box">
+        <h2>Dice a Roll!</h2>
+        <button onclick="runDice(6)" id="output3">Roll </button>
+     </div>
+
+
+     <!-- change background-color -->
+      <div class="box" id="box">
+        <h2>Background Colour </h2>
+        <button id="output4" onclick="changeColour()">Change</button>
+      </div>
+
+
+
+
+    <script>
+        
+        //function with one parameter
+        function greetUser(name){
+            if(!name) return alert(`Please Enter Your Name`);
+            else return `Hello! ${name}`;
+        }
+        function greet(){
+            const name = document.getElementById("name").value.trim();
+            const res1 = greetUser(name);
+            document.getElementById("output1").textContent = res1;
+        }
+        
+
+
+        //function with multi parameter
+       function calculate(num1, num2, operation) {
+    if (operation === 'add') return num1 + num2;
+    if (operation === 'sub') return num1 - num2;
+     if (operation === 'mul') return num1 * num2;
+      if (operation === 'divide') return num1 / num2;
+       if (operation === 'pow') return num1 ** num2;
+    
+    return 0;
+}
+
+function runCalculate() {
+    const val1 = Number(document.getElementById('number1').value);
+    const val2 = Number(document.getElementById('number2').value);
+    const op = document.getElementById('operation').value;
+    
+    const result = calculate(val1, val2, op);
+    document.getElementById('output2').textContent = "Result: " + result;
+}
+
+
+// roll a dice
+function rollDice(sides = 6) {
+    // Generates number from 1 up to 'sides'
+    return Math.floor(Math.random() * sides) + 1;
+}
+
+function runDice(sides) {
+    const result = rollDice(sides);
+    document.getElementById('output3').textContent = `You chose ${result}`;
+}
+
+
+// background colour change
+function changeColour(){
+    const box = document.getElementById("box");
+    const ar = ["#A4CE8B","#00C68D","#E4D329","#CA6180","#BDA6CE"];
+    const random = Math.floor(Math.random()* ar.length);
+    box.style.backgroundColor = ar[random];
+
+}
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
