@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather website</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: transparent;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1601134467661-3d775b999c8b?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+#container #location {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 11%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#container input {
+    height: 50px;
+    width: 300px;
+    margin: 0px 20px;
+    padding: 0 20px;
+    left: 0%;
+    border: none;
+    outline: none;
+    background: white;
+    font-size: 20px;
+    color: black;
+}
+
+#container input::placeholder {
+    color: #000000d0;
+}
+
+#container input[type="submit"] {
+    cursor: pointer;
+    width: 150px;
+    background: #000000d0;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#tempIcon {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 35%;
+    left: 60%;
+}
+
+#weatherCountry {
+    font-size: 40px;
+    position: absolute;
+    top: 37%;
+    margin-left: auto;
+    margin-right: 20%;
+}
+
+#temperature {
+    font-size: 45px;
+    position: absolute;
+    top: 45%;
+    left: 37%;
+}
+
+#temperature b {
+    color: red;
+}
+
+#weatherDescription {
+    font-size: 20px;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 38%;
+    left: 60%;
+}
+
+#container ul {
+    position: absolute;
+    bottom: 17%;
+    left: auto;
+    right: auto;
+    margin-right: 20%;
+}
+
+#container ul li {
+    font-size: 20px;
+    margin: 20px 0;
+    list-style-type: none;
+    margin-right: 5rem;
+}
+
+.features {
+    justify-content: center;
+}
+
+.flex {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 700px;
+    height: 25rem;
+    margin: 1em;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.credit {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+}
+
+#errorMsg {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: #ff5555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Weather Website</h1>
+        <div id="location">
+            <input type="text" id="country" placeholder="Country">
+            <input type="text" id="city" placeholder="City">
+            <input type="submit" id="check" value="Go">
+        </div>
+        <p id="errorMsg"></p>
+        <!-- <img src="tempicons/clouds.svg" alt="" id="tempIcon"> -->
+        <div class="flex">
+            <h2 id="weatherCountry">Cityname</h2>
+            <h2 id="temperature">0°<strong>C</strong></h2>
+            <!-- <h2 id="weatherDescription">Description</h2>    -->
+            <ul>
+                <div class="features">
+                    <li id="feelsLike">Feels Like 0°C</li>
+                    <li id="humidity">Humidity 0</li>
+                    <li id="longitude">Longitude 0</li>
+                    <li id="latitude">Latitude 0</li>
+                </div>
+            </ul>
+        </div>
+        <div class="credit">Done by varnitha kunigiri</div>
+    </div>
+
+
+    <script>
+let country = document.querySelector("#country");
+let city = document.querySelector("#city");
+let check = document.querySelector("#check");
+let tempIcon = document.querySelector("#tempIcon");
+let weatherCountry = document.querySelector("#weatherCountry");
+let temperature = document.querySelector("#temperature");
+let weatherDescription = document.querySelector("#weatherDescription");
+let feelsLike = document.querySelector("#feelsLike");
+let humidity = document.querySelector("#humidity");
+let longitude = document.querySelector("#longitude");
+let latitude = document.querySelector("#latitude");
+let errorMsg = document.querySelector("#errorMsg");
+let container = document.querySelector("#container");
+
+check.addEventListener("click", () => {
+    let key = "bd4ea33ecf905116d12af172e008dbae";
+    let cityValue = city.value.trim();
+    let countryValue = country.value.trim();
+
+    if (!cityValue) {
+        errorMsg.innerText = "Please enter a city name.";
+        return;
+    }
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&lang=en&units=metric&appid=${key}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.cod !== 200) {
+                errorMsg.innerText = data.message || "City not found. Please try again.";
+                return;
+            }
+
+            errorMsg.innerText = "";
+
+            weatherCountry.innerText = `${data.name} / ${data.sys.country}`;
+            temperature.innerHTML = `${data.main.temp}°<b>C</b>`;
+            
+
+            feelsLike.innerText = `Feels Like ${data.main.feels_like}°C`;
+            humidity.innerText = `Humidity ${data.main.humidity}`;
+            latitude.innerText = `Latitude ${data.coord.lat}`;
+            longitude.innerText = `Longitude ${data.coord.lon}`;
+        })
+        .catch(err => {
+            console.error(err);
+            errorMsg.innerText = "Something went wrong. Please try again.";
+        });
+
+    country.value = "";
+    city.value = "";
+});
+    </script>
+</body>
+</html>
